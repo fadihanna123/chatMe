@@ -1,0 +1,46 @@
+{
+  "name": "chatme_server",
+  "private": true,
+  "version": "0.0.1",
+  "lastUpgrade": "",
+  "homepage": "https://localhost:5000",
+  "author": {
+    "name": "Fadi Hanna",
+    "email": "fhanna181@gmail.com"
+  },
+  "scripts": {
+    "start": "pnpm dbDocs && prisma db push && prisma db pull && prisma generate && ts-node-dev -r tsconfig-paths/register src/app",
+    "dbDocs": "npx prisma generate"
+  },
+  "license": "MIT",
+  "prisma": {
+    "schema": "src/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.4.0",
+    "https": "^1.0.0",
+    "luxon": "^3.0.4",
+    "prisma": "^4.4.0",
+    "socket.io": "^4.5.2",
+    "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/luxon": "^3.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.24.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsdoc": "^39.3.6",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "prettier": "^2.7.1",
+    "prisma-docs-generator": "^0.5.0",
+    "tsconfig-paths": "^4.1.0",
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14.12.0",
+    "npm": "Please use pnpm instead of NPM to install dependencies",
+    "yarn": "Please use pnpm instead of Yarn to install dependencies"
+  }
+}
