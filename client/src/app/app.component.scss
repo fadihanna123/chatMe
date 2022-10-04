@@ -2,6 +2,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
   height: 100vh;
+}
+
+.enterBtn {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #add8e6;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.enterTxt {
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  font-weight: bold;
+  background-color: #add8e6;
 }

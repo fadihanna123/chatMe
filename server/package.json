@@ -1,8 +1,8 @@
 {
   "name": "chatme_server",
   "private": true,
-  "version": "0.0.1",
-  "lastUpgrade": "",
+  "version": "0.0.2",
+  "lastUpgrade": "20221004",
   "homepage": "https://localhost:5000",
   "author": {
     "name": "Fadi Hanna",
@@ -26,8 +26,8 @@
   },
   "devDependencies": {
     "@types/luxon": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.38.1",
-    "@typescript-eslint/parser": "^5.38.1",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
     "dotenv": "^16.0.3",
     "eslint": "^8.24.0",
     "eslint-plugin-import": "^2.26.0",

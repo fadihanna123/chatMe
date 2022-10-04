@@ -1,8 +1,14 @@
 <div class="joinForm">
-  <h1>WELCOME</h1>
-  <form>
-    <label for="Username">Username: </label>
-    <input type="text" />
-    <button></button>
+  <form [formGroup]="enterForm">
+    <input
+      placeholder="Nickname"
+      id="loginNickname"
+      type="text"
+      aria-label="login nickname"
+      class="enterTxt"
+      formControlName="nickName"
+    />
+    <br />
+    <button (click)="enterMe()" class="enterBtn">Enter Me</button>
   </form>
 </div>
