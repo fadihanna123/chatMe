@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { SocketIoConfig, SocketIoModule } from 'ngx-socket-io';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
+import { MsgFormComponent } from './msg-form/msg-form.component';
 import { ChatService } from './services/chat.service';
 
-const declarations = [AppComponent];
+const declarations = [AppComponent, MsgFormComponent];
 
-const imports = [BrowserModule, ReactiveFormsModule];
+const imports = [BrowserModule, ReactiveFormsModule, FontAwesomeModule];
 
 const providers: any[] = [ChatService];
 

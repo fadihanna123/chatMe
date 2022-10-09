@@ -1,24 +1,22 @@
-.joinForm {
+.joinFormContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.enterBtn {
-  padding: 10px;
-  border: 0;
-  border-radius: 10px;
-  font-weight: bold;
-  background-color: #add8e6;
-  margin: 10px;
-  cursor: pointer;
+.messagesPanel {
+  height: 850px;
+  overflow: auto;
 }
 
-.enterTxt {
-  padding: 10px;
-  border: 0;
-  border-radius: 10px;
-  font-weight: bold;
-  background-color: #add8e6;
+.senderMsg {
+  width: 200px;
+  height: 40px;
+  display: inline-block;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
 }

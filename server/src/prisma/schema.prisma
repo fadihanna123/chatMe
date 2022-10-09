@@ -12,10 +12,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model onlinelist {
+  id       Int      @id @default(autoincrement())
+  userId   String
+  nickname String
+  status   String
+  date     DateTime
+}
+
+model messages {
+  id       Int      @id @default(autoincrement())
+  userId   String
+  message  String?
+  nickname String
+  date     DateTime
+}
+
 model logs {
-  id      Int     @id @default(autoincrement())
+  id      Int    @id @default(autoincrement())
   method  String
-  message String?
+  message String
   located String
   time    String
 }

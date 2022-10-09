@@ -1,0 +1,26 @@
+<form [formGroup]="msgForm">
+  <div class="row mb-3">
+    <div class="col-md-10">
+      <input
+        aria-label="message"
+        placeholder="Insert your message here..."
+        type="text"
+        class="form-control"
+        formControlName="msg"
+        required
+        #msgInput
+      />
+    </div>
+    <div class="col-md-2">
+      <button
+        (click)="sendMsg()"
+        class="btn btn-success"
+        aria-label="Send message"
+        type="button"
+        (keypress)="onPressHandler($event)"
+      >
+        Send! <fa-icon [icon]="sendIcon"></fa-icon>
+      </button>
+    </div>
+  </div>
+</form>

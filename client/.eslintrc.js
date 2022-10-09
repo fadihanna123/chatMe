@@ -5,13 +5,10 @@ module.exports = {
     node: true,
   },
   root: true,
-  extends: [
-    'plugin:@typescript-eslint/recommended',
-    // "plugin:@typescript-eslint/recommended-requiring-type-checking"
-  ],
+  extends: ['plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: ['tsconfig.json' /* ,"tsconfig.spec.json" */],
+    project: ['tsconfig.json', 'tsconfig.spec.json'],
     sourceType: 'module',
     tsconfigRootDir: __dirname,
   },
