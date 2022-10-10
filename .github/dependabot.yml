@@ -1,0 +1,13 @@
+version: 1
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/server'
+    schedule:
+      interval: 'monthly'
+
+version: 1
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/client'
+    schedule:
+      interval: 'monthly'
