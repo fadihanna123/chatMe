@@ -52,10 +52,16 @@
       </div>
       <ng-template #noMsgs> No messages yet... </ng-template>
     </div>
-    <msgForm [msgList]="msgList" [joinForm]="joinForm"></msgForm>
+    <msgForm
+      [id]="selectedNickName"
+      [msgList]="msgList"
+      [joinForm]="joinForm"
+    ></msgForm>
   </div>
   <div class="col-md-1">
     <fa-icon [icon]="onlineIcon"></fa-icon> OnlineList
+    <br />
+    <button (click)="openNewRoom()">All</button>
     <div *ngFor="let user of onlineList">
       <fa-icon
         [icon]="dotIcon"
@@ -64,7 +70,9 @@
           'text-light': user.status === 'offline'
         }"
       ></fa-icon>
-      {{ user.nickname }}
+      <button (click)="openNewRoom(user.nickname, user.userId)">
+        {{ user.nickname }}
+      </button>
     </div>
   </div>
 </div>

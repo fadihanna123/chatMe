@@ -1,1 +1,2 @@
-export * from './messageList';
+export * from './messageList.model';
+export * from './onlineList.model';

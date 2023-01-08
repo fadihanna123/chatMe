@@ -1,9 +1,17 @@
-const { PORT, SSL_CRT_FILE, SSL_KEY_FILE, ORIGIN_URL } = process.env;
+const {
+  PORT,
+  ORIGIN_URL,
+  DEBUGGING_ADMIN_URL,
+  DEBUGGING_ADMIN_USERNAME,
+  DEBUGGING_ADMIN_PSW,
+} = process.env;
 
 export const serverPort = PORT;
 
 export const originUrl: string | undefined = ORIGIN_URL;
 
-export const crtFile: string | undefined = SSL_CRT_FILE;
+export const debuggingUrl: string | undefined = DEBUGGING_ADMIN_URL;
 
-export const keyFile: string | undefined = SSL_KEY_FILE;
+export const adminUname: string | undefined = DEBUGGING_ADMIN_USERNAME;
+
+export const adminPsw: string | undefined = DEBUGGING_ADMIN_PSW;

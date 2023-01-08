@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { faCircle, faRightToBracket, faSignal } from '@fortawesome/free-solid-svg-icons';
 import load from 'audio-loader';
 import play from 'audio-play';
-import * as dayjs from 'dayjs';
+import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 import { MessageList, OnlineList } from './models';
@@ -30,23 +30,24 @@ export class AppComponent implements OnInit {
   public joinIcon = faRightToBracket;
   public dotIcon = faCircle;
   public isSender: boolean = false;
+  public selectedNickName: string = '';
 
   constructor(private chat: ChatService, private settings: SettingsService) {
     dayjs.extend(relativeTime);
-    this.chat.getMessage().subscribe((data) => {
+    this.chat.getMessage().subscribe((data: MessageList) => {
       load('../assets/chat_alert.mp3').then(play);
       this.msgList.push(data);
     });
 
-    this.chat.getNewUser().subscribe((data) => this.onlineList.push(data));
+    this.chat
+      .getNewUser()
+      .subscribe((data: OnlineList) => this.onlineList.push(data));
     this.chat.disconnect().subscribe((data) => {
       const deletedItem = this.onlineList.find(
-        (x) => x.userId === data.userId
+        (onlineUser: OnlineList) => onlineUser.userId === data.userId
       )!;
 
-      if (deletedItem) {
-        deletedItem.status = 'offline';
-      }
+      deletedItem.status = deletedItem ? 'offline' : 'online';
     });
   }
 
@@ -61,10 +62,15 @@ export class AppComponent implements OnInit {
   }
 
   public nickNameTyper() {
-    if (!this.joinForm.get('nickName')?.value) {
-      this.noVal = true;
+    this.noVal = !this.joinForm.get('nickName')?.value ? true : false;
+  }
+
+  public openNewRoom(name?: string, id?: string) {
+    if (!name && !id) {
+      this.chat.openRoom('Group');
     } else {
-      this.noVal = false;
+      this.chat.openRoom(id!, 'Private');
+      this.selectedNickName = name!;
     }
   }
 

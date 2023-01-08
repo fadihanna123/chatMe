@@ -22,6 +22,9 @@
               "audio-play",
               "dayjs"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["node_modules"]
+            },
             "outputPath": "dist/client",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -70,10 +73,6 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "sslCert": "C:/Users/samih/cert.pem",
-            "sslKey": "C:/Users/samih/key.pem"
-          },
           "configurations": {
             "production": {
               "browserTarget": "client:build:production"

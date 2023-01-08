@@ -1,7 +1,6 @@
 import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import * as dayjs from 'dayjs';
 
 import { MessageList } from '../models';
 import { ChatService } from '../services';
@@ -14,6 +13,7 @@ import { ChatService } from '../services';
 export class MsgFormComponent implements OnInit {
   @Input() joinForm!: FormGroup;
   @Input() msgList!: MessageList[];
+  @Input() selectedNickName!: string;
   @ViewChild('msgInput', { static: true }) msgInput!: ElementRef;
 
   public msgForm!: FormGroup;
@@ -32,7 +32,9 @@ export class MsgFormComponent implements OnInit {
   }
 
   public sendMsg() {
-    const nickName = this.joinForm.get('nickName')?.value;
+    const nickName = this.selectedNickName
+      ? this.selectedNickName
+      : this.joinForm.get('nickName')?.value;
     const msg = this.msgForm.get('msg')?.value;
 
     if (!msg) {
@@ -40,6 +42,7 @@ export class MsgFormComponent implements OnInit {
     }
 
     this.chat.sendMessage(nickName, msg);
+    this.chat.setStorage({ nickName, msg, date: new Date() });
     this.msgInput.nativeElement.value = '';
   }
 
@@ -50,7 +53,7 @@ export class MsgFormComponent implements OnInit {
     }
   }
 
-  public ngOnInit(): void {
+  public ngOnInit() {
     this.initMsgForm();
   }
 }
