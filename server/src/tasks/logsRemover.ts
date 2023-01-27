@@ -4,6 +4,8 @@ import { fileCleaner } from './fileClenaer';
 
 /**
  * Clean log and error data in the database and call fileCleaner.
+ *
+ * @function logsRemover
  */
 
 export const logsRemover = async () => {

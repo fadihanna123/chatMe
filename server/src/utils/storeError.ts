@@ -4,11 +4,12 @@ import { DateTime } from 'luxon';
 /**
  * Store errors in the database
  *
- * @param message
- * @param method
- * @param located
+ * @async
+ * @function storeError
+ * @param { string } message
+ * @param { string } method
+ * @param { string } located
  */
-
 export const storeError = async (
   message: string,
   method: string,

@@ -3,7 +3,7 @@ import 'dotenv/config';
 import { PrismaClient } from '@prisma/client';
 import { instrument } from '@socket.io/admin-ui';
 import { MessageList, OnlineList } from 'models';
-import { Server } from 'socket.io';
+import { Server, Socket } from 'socket.io';
 import { logger } from 'tools';
 import { adminPsw, adminUname, debuggingUrl, originUrl, serverPort } from 'utils';
 
@@ -25,8 +25,8 @@ instrument(io, {
 
 export const prisma = new PrismaClient();
 
-io.on('connection', async (socket) => {
-  const date = new Date();
+io.on('connection', async (socket: Socket) => {
+  const date: Date = new Date();
   console.log(`${socket.id} has connected`);
   // storeLog(`${socket.id} has connected`, '', '');
   logger.info(`${socket.id} has connected`, '', '');
@@ -57,6 +57,12 @@ io.on('connection', async (socket) => {
   });
 
   socket.on('join', async (data: OnlineList) => {
+    /**
+     * @param { string } userId
+     * @param { string } nickname
+     * @param { string } status
+     * @param { Date } date
+     */
     const payload = {
       userId: data.userId,
       nickname: data.nickname,
@@ -73,6 +79,9 @@ io.on('connection', async (socket) => {
   });
 
   socket.on('disconnect', async () => {
+    /**
+     * @param { string } userId
+     */
     const data = { userId: socket.id };
     // await prisma.onlinelist.deleteMany({ where: data });
 

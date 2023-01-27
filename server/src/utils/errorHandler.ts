@@ -5,6 +5,7 @@ import { storeError } from './storeError';
 /**
  * Handle server errors.
  *
+ * @function errorHandler
  * @param error
  */
 

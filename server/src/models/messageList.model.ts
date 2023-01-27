@@ -1,3 +1,10 @@
+/**
+ * @param { string } userid
+ * @param { string } message
+ * @param { string } nickname
+ * @param { Date } date
+ * @param { number } id
+ */
 export class MessageList {
   constructor(
     public userId: string,
