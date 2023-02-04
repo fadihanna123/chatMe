@@ -1,6 +1,10 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { faCircle, faRightToBracket, faSignal } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCircle,
+  faRightToBracket,
+  faSignal,
+} from '@fortawesome/free-solid-svg-icons';
 import load from 'audio-loader';
 import play from 'audio-play';
 import dayjs from 'dayjs';
@@ -41,7 +45,7 @@ export class AppComponent implements OnInit {
 
     this.chat
       .getNewUser()
-      .subscribe((data: OnlineList) => this.onlineList.push(data));
+      .subscribe((user: OnlineList) => this.onlineList.push(user));
     this.chat.disconnect().subscribe((data) => {
       const deletedItem = this.onlineList.find(
         (onlineUser: OnlineList) => onlineUser.userId === data.userId
