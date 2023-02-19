@@ -1,7 +1,7 @@
 {
   "name": "chatme_server",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "lastUpgrade": "20230201",
   "homepage": "https://localhost:5000",
   "author": {
