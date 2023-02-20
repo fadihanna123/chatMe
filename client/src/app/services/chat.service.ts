@@ -15,8 +15,11 @@ export class ChatService {
     this.socket = io(serverUrl);
 
     this.socket.on('connect_error', (err: any) => {
+      // eslint-disable-next-line no-console
       console.log(err instanceof Error); // true
+      // eslint-disable-next-line no-console
       console.log(err.message); // not authorized
+      // eslint-disable-next-line no-console
       console.log(err.data); // { content: "Please retry later" }
       this.socket.connect();
     });

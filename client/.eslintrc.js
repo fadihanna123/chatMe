@@ -5,7 +5,7 @@ const config = {
     node: true,
   },
   root: true,
-  extends: ['plugin:@typescript-eslint/recommended'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:angular/johnpapa'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['tsconfig.json', 'tsconfig.spec.json'],
@@ -19,6 +19,7 @@ const config = {
     '@typescript-eslint',
   ],
   rules: {
+    'angular/service-name': 0,
     'no-console': 'error',
     '@typescript-eslint/adjacent-overload-signatures': 'error',
     '@typescript-eslint/array-type': [
