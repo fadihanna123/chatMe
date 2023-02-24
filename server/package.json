@@ -1,7 +1,7 @@
 {
   "name": "chatme_server",
   "private": true,
-  "version": "0.0.7",
+  "version": "0.0.8",
   "lastUpgrade": "20230201",
   "homepage": "https://localhost:5000",
   "author": {
@@ -9,9 +9,10 @@
     "email": "fhanna181@gmail.com"
   },
   "scripts": {
-    "dev": "pnpm dbDocs && pnpm seed && ts-node-dev -r tsconfig-paths/register src/app",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/app",
     "dbDocs": "npx prisma generate",
     "lint": "eslint .",
+    "format": "prettier -w .",
     "seed": "prisma db push && prisma db pull && prisma generate",
     "seed-delete": "prisma migrate reset"
   },
@@ -33,9 +34,11 @@
     "@typescript-eslint/parser": "^5.50.0",
     "dotenv": "^16.0.3",
     "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsdoc": "^39.7.5",
     "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.3",
     "prisma": "^4.10.1",
     "prisma-docs-generator": "^0.5.0",
