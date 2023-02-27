@@ -5,12 +5,17 @@ const config = {
     node: true,
   },
   root: true,
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:angular/johnpapa'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'plugin:angular/johnpapa',
+    'eslint:recommended',
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     project: ['tsconfig.json', 'tsconfig.spec.json'],
     sourceType: 'module',
     tsconfigRootDir: __dirname,
+    ecmaVersion: 2023,
   },
   plugins: [
     'eslint-plugin-import',
@@ -19,6 +24,7 @@ const config = {
     '@typescript-eslint',
   ],
   rules: {
+    'no-unused-vars': 'off',
     'angular/service-name': 0,
     'no-console': 'error',
     '@typescript-eslint/adjacent-overload-signatures': 'error',
