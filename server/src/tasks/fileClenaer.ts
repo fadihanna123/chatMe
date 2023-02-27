@@ -10,27 +10,18 @@ export const fileCleaner = () => {
   const errorPath: string = './src/logs/error.log';
   const newValue = '';
 
-  fs.readFile(logsPath, 'utf-8', (err) => {
-    if (err) {
-      throw err;
-    }
-
-    fs.writeFile(logsPath, newValue, 'utf-8', (err) => {
+  fs.promises
+    .readFile(logsPath)
+    .then(() => {
+      fs.promises.writeFile(errorPath, newValue).catch((err) => {
+        if (err) {
+          throw err;
+        }
+      });
+    })
+    .catch((err) => {
       if (err) {
         throw err;
       }
     });
-  });
-
-  fs.readFile(errorPath, 'utf-8', (err) => {
-    if (err) {
-      throw err;
-    }
-
-    fs.writeFile(errorPath, newValue, 'utf-8', (err) => {
-      if (err) {
-        throw err;
-      }
-    });
-  });
 };

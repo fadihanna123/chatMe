@@ -79,6 +79,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.50.0_ytaheplrfakkcgktvaerjv3uhe
   '@typescript-eslint/parser': 5.50.0_eu75t7jhmohuqnvpxysgmsdns4
   eslint: 8.33.0
+  eslint-config-prettier: 8.6.0_eslint@8.33.0
   eslint-plugin-angular: 4.1.0
   eslint-plugin-import: 2.27.5_ufewo3pl5nnmz6lltvjrdi2hii
   eslint-plugin-jsdoc: 39.7.5_eslint@8.33.0
