@@ -10,10 +10,12 @@ export class SettingsService {
   /**
    * Set page title based on title value.
    *
-   * @param title - Page title
+   * @function setPageTitle
+   * @param { string } title - Page title
+   * @returns { void }
+   * @example this.settings.setPageTitle("Welcome page");
    */
-
-  public setPageTitle(title: string) {
+  public setPageTitle(title: string): void {
     this.title.setTitle(title);
   }
 }

@@ -57,19 +57,36 @@ export class AppComponent implements OnInit {
 
   /**
    * Init join-form.
+   *
+   * @function initJoinForm
+   * @returns { void }
+   * @example this.initJoinForm();
    */
-
-  public initJoinForm() {
+  public initJoinForm(): void {
     this.joinForm = new FormGroup({
       nickName: new FormControl('', Validators.required),
     });
   }
 
-  public nickNameTyper() {
+  /**
+   * Assign nickName to a variable.
+   *
+   * @function nickNameTyper
+   * @returns { void }
+   * @example this.nickNameTyper();
+   */
+  public nickNameTyper(): void {
     this.noVal = !this.joinForm.get('nickName')?.value ? true : false;
   }
 
-  public openNewRoom(name?: string, id?: string) {
+  /**
+   * Opens a room.
+   *
+   * @function openNewRoom
+   * @returns { void }
+   * @example this.openNewRoom("Erik", 123);
+   */
+  public openNewRoom(name?: string, id?: string): void {
     if (!name && !id) {
       this.chat.openRoom('Group');
     } else {
@@ -78,7 +95,14 @@ export class AppComponent implements OnInit {
     }
   }
 
-  public enterMe() {
+  /**
+   * Handle when a user login.
+   *
+   * @function enterMe
+   * @returns { void }
+   * @example this.enterMe();
+   */
+  public enterMe(): void {
     if (!this.joinForm.get('nickName')?.value) {
       this.noVal = true;
       return;
@@ -89,18 +113,39 @@ export class AppComponent implements OnInit {
     this.settings.setPageTitle('chatMe - Chat Room');
   }
 
+  /**
+   * Handle when user click Enter on login.
+   *
+   * @function onPressHandler
+   * @returns { void }
+   * @example this.onPressHandler(e);
+   */
   @HostListener('keydown', ['$event'])
-  public onPressHandler(e: KeyboardEvent) {
+  public onPressHandler(e: KeyboardEvent): void {
     if (e.key === 'Enter') {
       this.enterMe();
     }
   }
 
-  public extractTime(date: Date) {
+  /**
+   * Parse date time to ago value.
+   *
+   * @function extractTime
+   * @returns { string }
+   * @example this.extractTime(20231020);
+   */
+  public extractTime(date: Date): string {
     return dayjs(date).fromNow();
   }
 
-  public ngOnInit() {
+  /**
+   * Handle when component renders.
+   *
+   * @function ngOnInit
+   * @returns { void }
+   * @example this.ngOnInit();
+   */
+  public ngOnInit(): void {
     this.initJoinForm();
   }
 }
