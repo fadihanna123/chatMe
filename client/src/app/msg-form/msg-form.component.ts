@@ -30,18 +30,29 @@ export class MsgFormComponent implements OnInit {
 
   /**
    * Init message-form.
+   *
+   * @function initMsgForm
+   * @returns { void }
+   * @example this.initMsgForm();
    */
-
-  public initMsgForm() {
+  public initMsgForm(): void {
     this.msgForm = new FormGroup({
       msg: new FormControl('', Validators.required),
     });
   }
 
-  public sendMsg() {
+  /**
+   * Handle when sending messages to the server.
+   *
+   * @function initMsgForm
+   * @returns { void }
+   * @example this.sendMsg();
+   */
+  public sendMsg(): void {
     const nickName = this.selectedNickName
       ? this.selectedNickName
       : this.joinForm.get('nickName')?.value;
+
     const msg = this.msgForm.get('msg')?.value;
 
     if (!msg) {
@@ -53,14 +64,28 @@ export class MsgFormComponent implements OnInit {
     this.msgInput.nativeElement.value = '';
   }
 
+  /**
+   * Handle when click enter key.
+   *
+   * @function onPressHandler
+   * @returns { void }
+   * @example this.onPressHandler();
+   */
   @HostListener('keydown', ['$event'])
-  public onPressHandler(e: KeyboardEvent) {
+  public onPressHandler(e: KeyboardEvent): void {
     if (e.key === 'Enter') {
       this.sendMsg();
     }
   }
 
-  public ngOnInit() {
+  /**
+   * Handle when component renders.
+   *
+   * @function ngOnInit
+   * @returns { void }
+   * @example this.ngOnInit();
+   */
+  public ngOnInit(): void {
     this.initMsgForm();
   }
 }

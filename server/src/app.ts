@@ -34,11 +34,11 @@ export const prisma = new PrismaClient();
 io.on('connection', async (socket: Socket) => {
   const date: Date = new Date();
   // eslint-disable-next-line no-console
-  console.log(`${socket.id} has connected`);
+  console.log(`✅${socket.id} has connected`);
   // storeLog(`${socket.id} has connected`, '', '');
-  logger.info(`${socket.id} has connected`, '', '');
+  logger.info(`✅${socket.id} has connected`, '', '');
 
-  socket.on('sendMsg', async (data: MessageList) => {
+  socket.on('sendMsg', async (data: any) => {
     /*  const payload: MessageList = {
       userId: data.userId,
       nickname: data.nickname,
@@ -49,8 +49,11 @@ io.on('connection', async (socket: Socket) => {
     // await prisma.messages.create({
     //   data: payload,
     // });
-
-    io.sockets.emit('new message', data);
+    if (data.roomId) {
+      socket.broadcast.to(data.roomId).emit('new message');
+    } else {
+      io.sockets.emit('new message', data);
+    }
   });
 
   socket.on('joinRoom', async (data: any) => {
@@ -59,7 +62,6 @@ io.on('connection', async (socket: Socket) => {
       socket.broadcast.to('Group').emit('new message');
     } else {
       socket.join(data.roomId);
-      socket.broadcast.to(data.roomId).emit('new message');
     }
   });
 

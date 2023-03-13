@@ -56,6 +56,7 @@
     "eslint-plugin-jsdoc": "^40.0.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.2.1",
+    "htmlhint": "^1.1.4",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.1",
     "karma-chrome-launcher": "~3.1.1",
