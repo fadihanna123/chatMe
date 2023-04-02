@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@prisma/client': ^4.12.0
   '@socket.io/admin-ui': ^0.5.1
+  '@types/eslint': ^8.37.0
   '@types/luxon': ^3.2.0
   '@typescript-eslint/eslint-plugin': ^5.57.0
   '@typescript-eslint/parser': ^5.57.0
@@ -33,6 +34,7 @@ dependencies:
 
 devDependencies:
   '@prisma/client': 4.12.0_prisma@4.12.0
+  '@types/eslint': 8.37.0
   '@types/luxon': 3.2.0
   '@typescript-eslint/eslint-plugin': 5.57.0_z24sz2fazj3bxoipp6m4s7b2mi
   '@typescript-eslint/parser': 5.57.0_vwh6htx42aidho2qgfca5u5rwm
@@ -425,6 +427,17 @@ packages:
     resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
     dependencies:
       '@types/ms': 0.7.31
+    dev: true
+
+  /@types/eslint/8.37.0:
+    resolution: {integrity: sha512-Piet7dG2JBuDIfohBngQ3rCt7MgO9xCO4xIMKxBThCq5PNRB91IjlJ10eJVwfoNtvTErmxLzwBZ7rHZtbOMmFQ==}
+    dependencies:
+      '@types/estree': 1.0.0
+      '@types/json-schema': 7.0.11
+    dev: true
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
   /@types/json-schema/7.0.11:

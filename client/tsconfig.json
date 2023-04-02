@@ -30,7 +30,6 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "include": ["src/**/*"],
-  "files": [".eslintrc.js"],
+  "include": ["src/**/*", ".eslintrc.js"],
   "exclude": ["node_modules"]
 }

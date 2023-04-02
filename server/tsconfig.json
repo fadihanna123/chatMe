@@ -12,6 +12,6 @@
       "@core/*": ["src/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", ".eslintrc.js"],
   "exclude": ["node_modules"]
 }
