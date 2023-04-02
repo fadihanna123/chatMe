@@ -1,8 +1,8 @@
 {
   "name": "chatme_server",
   "private": true,
-  "version": "0.0.9",
-  "lastUpgrade": "20230302",
+  "version": "0.0.10",
+  "lastUpgrade": "20230402",
   "homepage": "https://localhost:5000",
   "author": {
     "name": "Fadi Hanna",
@@ -23,28 +23,28 @@
   "dependencies": {
     "@socket.io/admin-ui": "^0.5.1",
     "https": "^1.0.0",
-    "luxon": "^3.2.1",
+    "luxon": "^3.3.0",
     "socket.io": "^4.6.1",
     "winston": "^3.8.2"
   },
   "devDependencies": {
-    "@prisma/client": "^4.11.0",
+    "@prisma/client": "^4.12.0",
     "@types/luxon": "^3.2.0",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
     "dotenv": "^16.0.3",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^40.0.0",
+    "eslint-plugin-jsdoc": "^40.1.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4",
-    "prisma": "^4.11.0",
+    "prettier": "^2.8.7",
+    "prisma": "^4.12.0",
     "prisma-docs-generator": "^0.6.0",
-    "tsconfig-paths": "^3.14.2",
-    "typescript": "^4.9.5"
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.3"
   },
   "engines": {
     "node": ">=14.12.0",
