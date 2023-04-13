@@ -6,9 +6,10 @@ import { DateTime } from 'luxon';
  *
  * @async
  * @function storeLog
- * @param { string } message
- * @param { string } method
- * @param { string } located
+ * @param { string } message - Log message.
+ * @param { string } method - HTTP method.
+ * @param { string } located - Route.
+ * @example storeLog("{ name: 'Test' }", "GET", "/");
  */
 export const storeLog = async (
   message: string,

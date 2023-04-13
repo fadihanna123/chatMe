@@ -2,13 +2,14 @@ import { prisma } from 'app';
 import { DateTime } from 'luxon';
 
 /**
- * Store errors in the database
+ * Store errors in the database.
  *
  * @async
  * @function storeError
- * @param { string } message
- * @param { string } method
- * @param { string } located
+ * @param { string } message - Error message.
+ * @param { string } method - HTTP method.
+ * @param { string } located - Route.
+ * @example storeError("Error!", "POST", "/");
  */
 export const storeError = async (
   message: string,

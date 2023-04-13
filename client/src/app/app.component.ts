@@ -25,16 +25,16 @@ import { ChatService } from './services/chat.service';
 })
 export class AppComponent implements OnInit {
   public joinForm!: FormGroup;
-  public login: boolean = false;
-  public noVal: boolean = false;
-  public userId: string = '';
+  public login = false;
+  public noVal = false;
+  public userId = '';
   public msgList: MessageList[] = [];
   public onlineList: OnlineList[] = [];
   public onlineIcon = faSignal;
   public joinIcon = faRightToBracket;
   public dotIcon = faCircle;
-  public isSender: boolean = false;
-  public selectedNickName: string = '';
+  public isSender = false;
+  public selectedNickName = '';
 
   constructor(private chat: ChatService, private settings: SettingsService) {
     dayjs.extend(relativeTime);
@@ -49,8 +49,9 @@ export class AppComponent implements OnInit {
     this.chat.disconnect().subscribe((data) => {
       const deletedItem = this.onlineList.find(
         (onlineUser: OnlineList) => onlineUser.userId === data.userId
-      )!;
+      );
 
+      if (!deletedItem) return;
       deletedItem.status = deletedItem ? 'offline' : 'online';
     });
   }
@@ -90,8 +91,10 @@ export class AppComponent implements OnInit {
     if (!name && !id) {
       this.chat.openRoom('Group');
     } else {
-      this.chat.openRoom(id!, 'Private');
-      this.selectedNickName = name!;
+      if (!id) return;
+      this.chat.openRoom(id, 'Private');
+      if (!name) return;
+      this.selectedNickName = name;
     }
   }
 

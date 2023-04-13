@@ -6,10 +6,7 @@ const {
   DEBUGGING_ADMIN_PSW,
 } = process.env;
 
-/**
- * @type { string | undefined }
- */
-export const serverPort: string | undefined = PORT;
+export const serverPort = PORT;
 
 /**
  * @type { string | undefined }

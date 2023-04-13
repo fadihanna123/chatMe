@@ -15,10 +15,10 @@ export class ChatService {
   constructor() {
     this.socket = io(serverUrl);
 
-    this.socket.on('connect_error', (err: any) => {
+    this.socket.on('connect_error', (err) => {
       console.log(err instanceof Error);
       console.log(err.message);
-      console.log(err.data);
+      console.log((err as any).data);
       this.socket.connect();
     });
 
@@ -134,11 +134,11 @@ export class ChatService {
    *
    * @function openRoom
    * @param { string } id - Id of the user
-   * @param { string } roomType - Group or Private
+   * @param roomType - Group or Private
    * @example this.chat.openRoom("123", "Private");
    */
 
-  public openRoom(id: string, roomType: string = 'Group'): void {
+  public openRoom(id: string, roomType = 'Group'): void {
     this.socket.emit('joinRoom', {
       roomId: roomType === 'Group' ? 'Group' : id,
     });

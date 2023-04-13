@@ -2,7 +2,7 @@ import 'dotenv/config.js';
 
 import { PrismaClient } from '@prisma/client';
 import { instrument } from '@socket.io/admin-ui';
-import { MessageList, OnlineList } from 'models';
+import { OnlineList } from 'models';
 import { Server, Socket } from 'socket.io';
 import { logger } from 'tools';
 import {
@@ -38,7 +38,7 @@ io.on('connection', async (socket: Socket) => {
   // storeLog(`${socket.id} has connected`, '', '');
   logger.info(`✅${socket.id} has connected`, '', '');
 
-  socket.on('sendMsg', async (data: any) => {
+  socket.on('sendMsg', async (data) => {
     /*  const payload: MessageList = {
       userId: data.userId,
       nickname: data.nickname,
@@ -56,7 +56,7 @@ io.on('connection', async (socket: Socket) => {
     }
   });
 
-  socket.on('joinRoom', async (data: any) => {
+  socket.on('joinRoom', async (data) => {
     if (data.roomId === 'Group') {
       socket.join('Group');
       socket.broadcast.to('Group').emit('new message');

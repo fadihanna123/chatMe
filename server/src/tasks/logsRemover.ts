@@ -1,5 +1,4 @@
-import { prisma } from 'db';
-
+import { prisma } from 'app';
 import { fileCleaner } from './fileClenaer';
 
 /**
