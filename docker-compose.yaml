@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: chatme_db
+    ports:
+      - 5432:5432
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: chatme
+    volumes:
+      - chatme-data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer:latest
+    container_name: chatme_db_admin
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    volumes:
+      - chatme-admin:/var/lib/db/data
+
+  api:
+    build: ./server
+    container_name: chatme_backend
+    ports:
+      - 5000:5000
+    env_file:
+      - ./server/.env.prod
+    restart: unless-stopped
+    links:
+      - db
+
+  web:
+    build: ./client
+    container_name: chatme_frontend
+    ports:
+      - 4200:4200
+    restart: unless-stopped
+    links:
+      - api
+
+volumes:
+  chatme-data:
+  chatme-admin:

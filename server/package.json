@@ -11,9 +11,11 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register src/app",
     "dbDocs": "npx prisma generate",
+    "build": "tsc",
     "lint": "eslint .",
     "format": "prettier -w .",
     "seed": "prisma db push && prisma db pull && prisma generate",
+    "seed-migrate": "prisma migrate dev",
     "seed-delete": "prisma migrate reset"
   },
   "license": "MIT",

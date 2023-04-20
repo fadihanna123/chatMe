@@ -1,0 +1,6 @@
+server/node_modules
+server/build
+client/build
+client/node_modules
+.git
+README.md

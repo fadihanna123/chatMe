@@ -13,7 +13,7 @@ import { MessageList } from '../models';
 import { ChatService } from '../services';
 
 @Component({
-  selector: 'msgdsForm',
+  selector: 'msgForm',
   templateUrl: './msg-form.component.html',
   styleUrls: ['./msg-form.component.scss'],
 })
