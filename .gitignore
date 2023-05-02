@@ -232,6 +232,11 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Docker
+server/Dockerfile
+client/Dockerfile
+docker-compose.yaml
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,angular,node
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
