@@ -5,11 +5,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { MsgFormComponent } from './msg-form/msg-form.component';
-import { ChatService } from './services/chat.service';
+import { ChatService } from './services';
+import { HttpClientModule } from '@angular/common/http';
 
 const declarations = [AppComponent, MsgFormComponent];
 
-const imports = [BrowserModule, ReactiveFormsModule, FontAwesomeModule];
+const imports = [
+  BrowserModule,
+  ReactiveFormsModule,
+  FontAwesomeModule,
+  HttpClientModule,
+];
 
 const providers: any[] = [ChatService];
 

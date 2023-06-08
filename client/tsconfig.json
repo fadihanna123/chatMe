@@ -1,12 +1,10 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "src",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -17,10 +15,10 @@
     "importHelpers": true,
     "target": "ESNext",
     "module": "ESNext",
-    "lib": ["ESNext", "dom"],
+    "lib": ["ESNext", "dom", "DOM.Iterable"],
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@core/*": ["src/*"],
+      "@core/*": ["src/app/"],
       "@assets/*": ["src/assets/*"]
     }
   },
