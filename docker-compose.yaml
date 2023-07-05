@@ -2,17 +2,14 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:latest
+    image: mysql:latest
     container_name: chatme_db
-    ports:
-      - 5432:5432
     restart: unless-stopped
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: secret
-      POSTGRES_DB: chatme
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DB: chat_me_docker
     volumes:
-      - chatme-data:/var/lib/postgresql/data
+      - chatme-data:/var/lib/mysql
 
   adminer:
     image: adminer:latest

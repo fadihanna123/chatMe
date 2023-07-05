@@ -2,7 +2,6 @@ import fs from 'fs';
 
 /**
  * Clean log and error files.
- *
  * @function fileCleaner
  * @example fileCleaner():
  */

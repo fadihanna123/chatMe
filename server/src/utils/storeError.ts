@@ -3,7 +3,6 @@ import { DateTime } from 'luxon';
 
 /**
  * Store errors in the database.
- *
  * @async
  * @function storeError
  * @param { string } message - Error message.
