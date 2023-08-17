@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Dependencies - Server",
+      "type": "shell",
+      "command": "cd server && pnpm i",
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    },
+    {
+      "label": "Install Dependencies - Client",
+      "type": "shell",
+      "command": "cd client && pnpm i",
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    },
+    {
+      "label": "Remove dependencies - Server",
+      "type": "shell",
+      "command": "cd server && rm -rf node_modules",
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    },
+    {
+      "label": "Remove dependencies - Client",
+      "type": "shell",
+      "command": "cd client && rm -rf node_modules",
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    }
+  ]
+}
