@@ -12,6 +12,17 @@
       }
     },
     {
+      "label": "Seed DB",
+      "type": "shell",
+      "command": "cd server && pnpm seed",
+      "runOptions": { "runOn": "folderOpen" },
+      "dependsOn": "Install Dependencies - Server",
+      "presentation": {
+        "reveal": "silent",
+        "close": true
+      }
+    },
+    {
       "label": "Install Dependencies - Client",
       "type": "shell",
       "command": "cd client && pnpm i",
