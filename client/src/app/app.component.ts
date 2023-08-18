@@ -10,7 +10,6 @@ import play from 'audio-play';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
-import { MessageList, OnlineList } from './models';
 import { SettingsService } from './services';
 import { ChatService } from './services/chat.service';
 
@@ -36,7 +35,10 @@ export class AppComponent implements OnInit {
   public isSender = false;
   public selectedNickName = '';
 
-  constructor(private chat: ChatService, private settings: SettingsService) {
+  constructor(
+    private chat: ChatService,
+    private settings: SettingsService
+  ) {
     dayjs.extend(relativeTime);
     this.chat.getMessage().subscribe((data: MessageList) => {
       load('../assets/chat_alert.mp3').then(play);

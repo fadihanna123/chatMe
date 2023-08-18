@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { io } from 'socket.io-client';
 
-import { MessageList, OnlineList, Message } from 'app/models';
 import { serverUrl } from 'environments/environment';
 
 @Injectable({

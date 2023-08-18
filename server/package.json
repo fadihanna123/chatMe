@@ -14,7 +14,7 @@
     "build": "tsc",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "seed": "prisma db push && prisma db pull && prisma generate",
+    "seed": "npx prisma db push && npx prisma db pull && npx prisma generate",
     "seed-migrate": "prisma migrate dev",
     "seed-delete": "prisma migrate reset"
   },
