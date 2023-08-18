@@ -4,50 +4,65 @@
     {
       "label": "Install Dependencies - Server",
       "type": "shell",
-      "command": "cd server && pnpm i",
+      "command": "pnpm i",
       "runOptions": { "runOn": "folderOpen" },
       "presentation": {
         "reveal": "silent",
         "close": true
+      },
+      "options": {
+        "cwd": "./server"
       }
     },
     {
       "label": "Seed DB",
       "type": "shell",
-      "command": "cd server && pnpm seed",
+      "command": "pnpm seed",
       "runOptions": { "runOn": "folderOpen" },
       "dependsOn": "Install Dependencies - Server",
       "presentation": {
         "reveal": "silent",
         "close": true
+      },
+      "options": {
+        "cwd": "./server"
       }
     },
     {
       "label": "Install Dependencies - Client",
       "type": "shell",
-      "command": "cd client && pnpm i",
+      "command": "pnpm i",
       "runOptions": { "runOn": "folderOpen" },
       "presentation": {
         "reveal": "silent",
         "close": true
+      },
+      "options": {
+        "cwd": "./client"
       }
     },
     {
       "label": "Remove dependencies - Server",
       "type": "shell",
-      "command": "cd server && rm -rf node_modules",
+      "command": "rm -rf node_modules",
       "presentation": {
         "reveal": "silent",
         "close": true
+      },
+      "options": {
+        "cwd": "./server"
       }
     },
     {
       "label": "Remove dependencies - Client",
       "type": "shell",
-      "command": "cd client && rm -rf node_modules",
+      "command": "rm -rf node_modules",
       "presentation": {
         "reveal": "silent",
         "close": true
+      },
+      "options": {
+        "cwd": "./client"
       }
     }
   ]
