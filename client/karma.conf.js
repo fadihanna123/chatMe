@@ -1,7 +1,10 @@
+// @ts-check
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
-module.exports = function (config) {
+module.exports = function (
+  /** @type {{ set: (arg0: { basePath: string; frameworks: string[]; plugins: any[]; client: { jasmine: {}; clearContext: boolean; }; jasmineHtmlReporter: { suppressAll: boolean; }; coverageReporter: { dir: any; subdir: string; reporters: { type: string; }[]; }; reporters: string[]; port: number; colors: boolean; logLevel: any; autoWatch: boolean; browsers: string[]; singleRun: boolean; restartOnFileChange: boolean; }) => void; LOG_INFO: any; }} */ config
+) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],

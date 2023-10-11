@@ -1,8 +1,8 @@
 {
   "name": "chatme_server",
   "private": true,
-  "version": "0.0.13",
-  "lastUpgrade": "20230705",
+  "version": "0.0.14",
+  "lastUpgrade": "20231011",
   "homepage": "https://localhost:5000",
   "author": {
     "name": "Fadi Hanna",
@@ -10,11 +10,10 @@
   },
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register src/app",
-    "dbDocs": "npx prisma generate",
     "build": "tsc",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "seed": "npx prisma db push && npx prisma db pull && npx prisma generate",
+    "postinstall": "prisma db push && prisma db pull && prisma generate",
     "seed-migrate": "prisma migrate dev",
     "seed-delete": "prisma migrate reset"
   },
@@ -25,35 +24,34 @@
   "dependencies": {
     "@socket.io/admin-ui": "^0.5.1",
     "https": "^1.0.0",
-    "luxon": "^3.3.0",
-    "socket.io": "^4.7.1",
-    "winston": "^3.9.0"
+    "luxon": "^3.4.3",
+    "socket.io": "^4.7.2",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
-    "@prisma/client": "^4.16.2",
-    "@types/eslint": "^8.40.2",
-    "@types/luxon": "^3.3.0",
-    "@types/node-cron": "^3.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
-    "@typescript-eslint/parser": "^5.61.0",
+    "@prisma/client": "^5.4.2",
+    "@types/eslint": "^8.44.4",
+    "@types/luxon": "^3.3.2",
+    "@types/node-cron": "^3.0.9",
+    "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "@typescript-eslint/parser": "^6.7.5",
     "dotenv": "^16.3.1",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsdoc": "^46.4.3",
+    "eslint": "^8.51.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^5.0.1",
     "node-cron": "^3.0.2",
-    "prettier": "^2.8.8",
-    "prisma": "^4.16.2",
+    "prettier": "^3.0.3",
+    "prisma": "^5.4.2",
     "prisma-docs-generator": "^0.8.0",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   },
   "engines": {
     "node": ">=14.12.0",
-    "npm": "Please use pnpm instead of NPM to install dependencies",
-    "yarn": "Please use pnpm instead of Yarn to install dependencies"
+    "npm": "Please use Yarn instead of Npm to install dependencies"
   }
 }
