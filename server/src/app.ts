@@ -2,7 +2,6 @@ import 'dotenv/config.js';
 
 import { PrismaClient } from '@prisma/client';
 import { instrument } from '@socket.io/admin-ui';
-import { OnlineList } from 'models';
 import { Server, Socket } from 'socket.io';
 import { logger } from 'tools';
 import {
