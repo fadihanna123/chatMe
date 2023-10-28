@@ -1,4 +1,4 @@
-FROM node:19-alpine
+FROM node:20-alpine
 WORKDIR /node
 COPY ./ .
 RUN npm i -g pnpm prisma ts-node-dev
