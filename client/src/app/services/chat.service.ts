@@ -28,7 +28,6 @@ export class ChatService {
 
   /**
    * Get every new message from the server.
-   *
    * @function getMessage
    * @returns { Observable<any> } An observable
    * @example this.chat.getMessage();
@@ -43,7 +42,6 @@ export class ChatService {
 
   /**
    * Get every new user from the server.
-   *
    * @function getNewUser
    * @returns { Observable<any> } An observable
    * @example this.chat.getNewUser();
@@ -58,7 +56,6 @@ export class ChatService {
 
   /**
    * Detect when a user disconnects.
-   *
    * @function disconnect
    * @returns { Observable<any> } An observable
    * @example this.chat.disconnect();
@@ -73,7 +70,6 @@ export class ChatService {
 
   /**
    * Send a message to backend.
-   *
    * @function sendMessage
    * @param nickName - Nickname
    * @param msg - Message
@@ -92,7 +88,6 @@ export class ChatService {
 
   /**
    * Get sessionStorage data.
-   *
    * @function getStorage
    * @param { string } selected
    * @returns { [] } An Array
@@ -106,7 +101,6 @@ export class ChatService {
 
   /**
    * Set sessionStorage data.
-   *
    * @function setStorage
    * @param { Message } data
    * @param { string } selected
@@ -130,13 +124,11 @@ export class ChatService {
 
   /**
    * Opens a new room.
-   *
    * @function openRoom
    * @param { string } id - Id of the user
    * @param roomType - Group or Private
    * @example this.chat.openRoom("123", "Private");
    */
-
   public openRoom(id: string, roomType = 'Group'): void {
     this.socket.emit('joinRoom', {
       roomId: roomType === 'Group' ? 'Group' : id,
@@ -145,7 +137,6 @@ export class ChatService {
 
   /**
    * Send the new nickname to backend.
-   *
    * @function joinChat
    * @param { string } nickName
    * @param { number } id

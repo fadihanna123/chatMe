@@ -1,5 +1,6 @@
 declare global {
   /**
+   * Message
    * @param { string } msg
    * @param { string } nickName
    * @param { Date } date
@@ -11,6 +12,7 @@ declare global {
   }
 
   /**
+   * MessageList
    * @param { number } id
    * @param { string } userId
    * @param { string } message
@@ -26,6 +28,7 @@ declare global {
   }
 
   /**
+   * OnlineList
    * @param { string } id
    * @param { string } userId
    * @param { string } message

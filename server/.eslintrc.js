@@ -5,7 +5,7 @@
 const config = {
   env: {
     node: true,
-    es2022: true,
+    es2023: true,
   },
   extends: [
     'eslint:recommended',
@@ -14,12 +14,15 @@ const config = {
     'plugin:jsdoc/recommended-error',
     'plugin:jsdoc/recommended-typescript',
     'plugin:jsdoc/recommended-typescript-error',
+    'prisma',
+    'plugin:editorconfig/all',
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     '@typescript-eslint',
@@ -27,6 +30,9 @@ const config = {
     'eslint-plugin-import',
     'eslint-plugin-jsdoc',
     'eslint-plugin-prefer-arrow',
+    'dtslint',
+    'editorconfig',
+    'eslint-plugin-tsdoc',
   ],
   rules: {
     'jsdoc/no-restricted-syntax': 'off',
@@ -77,6 +83,11 @@ const config = {
     'jsdoc/sort-tags': 0,
     'jsdoc/tag-lines': 1,
     'jsdoc/valid-types': 1,
+    'dtslint/expect-deprecation': 'error',
+    'dtslint/expect-type': 'error',
+    'dtslint/no-typo': 'error',
+    'tsdoc/syntax': 'off',
+    'editorconfig/eol-last': 'off',
   },
 };
 

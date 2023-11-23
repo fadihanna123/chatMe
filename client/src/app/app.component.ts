@@ -24,16 +24,16 @@ import { ChatService } from './services/chat.service';
 })
 export class AppComponent implements OnInit {
   public joinForm!: FormGroup;
-  public login = false;
-  public noVal = false;
-  public userId = '';
+  public login: boolean = false;
+  public noVal: boolean = false;
+  public userId: string = '';
   public msgList: MessageList[] = [];
   public onlineList: OnlineList[] = [];
   public onlineIcon = faSignal;
   public joinIcon = faRightToBracket;
   public dotIcon = faCircle;
-  public isSender = false;
-  public selectedNickName = '';
+  public isSender: boolean = false;
+  public selectedNickName: string = '';
 
   constructor(
     private chat: ChatService,
@@ -60,7 +60,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Init join-form.
-   *
    * @function initJoinForm
    * @returns { void }
    * @example this.initJoinForm();
@@ -73,7 +72,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Assign nickName to a variable.
-   *
    * @function nickNameTyper
    * @returns { void }
    * @example this.nickNameTyper();
@@ -84,7 +82,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Opens a room.
-   *
    * @function openNewRoom
    * @returns { void }
    * @example this.openNewRoom("Erik", 123);
@@ -102,7 +99,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Handle when a user login.
-   *
    * @function enterMe
    * @returns { void }
    * @example this.enterMe();
@@ -120,7 +116,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Handle when user click Enter on login.
-   *
    * @function onPressHandler
    * @returns { void }
    * @example this.onPressHandler(e);
@@ -134,7 +129,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Parse date time to ago value.
-   *
    * @function extractTime
    * @returns { string }
    * @example this.extractTime(20231020);
@@ -145,7 +139,6 @@ export class AppComponent implements OnInit {
 
   /**
    * Handle when component renders.
-   *
    * @function ngOnInit
    * @returns { void }
    * @example this.ngOnInit();

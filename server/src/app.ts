@@ -1,8 +1,8 @@
 import 'dotenv/config.js';
-
 import { PrismaClient } from '@prisma/client';
 import { instrument } from '@socket.io/admin-ui';
-import { Server, Socket } from 'socket.io';
+import type { Socket } from 'socket.io';
+import { Server } from 'socket.io';
 import { logger } from 'tools';
 import {
   adminPsw,
@@ -30,14 +30,14 @@ instrument(io, {
 
 export const prisma = new PrismaClient();
 
-io.on('connection', async (socket: Socket) => {
+io.on('connection', (socket: Socket) => {
   const date: Date = new Date();
   // eslint-disable-next-line no-console
   console.log(`✅${socket.id} has connected`);
   // storeLog(`${socket.id} has connected`, '', '');
   logger.info(`✅${socket.id} has connected`, '', '');
 
-  socket.on('sendMsg', async (data) => {
+  socket.on('sendMsg', (data: { roomId: string }) => {
     /*  const payload: MessageList = {
       userId: data.userId,
       nickname: data.nickname,
@@ -55,16 +55,16 @@ io.on('connection', async (socket: Socket) => {
     }
   });
 
-  socket.on('joinRoom', async (data) => {
+  socket.on('joinRoom', async (data: { roomId: string }) => {
     if (data.roomId === 'Group') {
-      socket.join('Group');
+      await socket.join('Group');
       socket.broadcast.to('Group').emit('new message');
     } else {
-      socket.join(data.roomId);
+      await socket.join(data.roomId);
     }
   });
 
-  socket.on('join', async (data: OnlineList) => {
+  socket.on('join', (data: OnlineList) => {
     /**
      * @param { string } userId
      * @param { string } nickname
@@ -86,7 +86,7 @@ io.on('connection', async (socket: Socket) => {
     socket.broadcast.emit('login', true);
   });
 
-  socket.on('disconnect', async () => {
+  socket.on('disconnect', () => {
     /**
      * @param { string } userId
      */

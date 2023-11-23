@@ -1,6 +1,5 @@
-import { logger } from 'tools';
-
 import { storeError } from './storeError';
+import { logger } from 'tools';
 
 /**
  * Handle server errors.

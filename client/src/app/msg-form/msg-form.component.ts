@@ -29,7 +29,6 @@ export class MsgFormComponent implements OnInit {
 
   /**
    * Init message-form.
-   *
    * @function initMsgForm
    * @returns { void }
    * @example this.initMsgForm();
@@ -42,7 +41,6 @@ export class MsgFormComponent implements OnInit {
 
   /**
    * Handle when sending messages to the server.
-   *
    * @function initMsgForm
    * @returns { void }
    * @example this.sendMsg();
@@ -65,7 +63,6 @@ export class MsgFormComponent implements OnInit {
 
   /**
    * Handle when click enter key.
-   *
    * @function onPressHandler
    * @returns { void }
    * @example this.onPressHandler();
@@ -79,7 +76,6 @@ export class MsgFormComponent implements OnInit {
 
   /**
    * Handle when component renders.
-   *
    * @function ngOnInit
    * @returns { void }
    * @example this.ngOnInit();

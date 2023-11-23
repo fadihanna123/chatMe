@@ -1,5 +1,5 @@
-import { prisma } from 'app';
 import { fileCleaner } from './fileClenaer';
+import { prisma } from 'app';
 
 /**
  * Clean log and error data in the database and call fileCleaner.

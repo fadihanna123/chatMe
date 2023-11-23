@@ -9,7 +9,6 @@ export class SettingsService {
 
   /**
    * Set page title based on title value.
-   *
    * @function setPageTitle
    * @param { string } title - Page title
    * @returns { void }

@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2022": true
+    "es2023": true
   },
   "root": true,
   "ignorePatterns": ["projects/**/*"],
@@ -44,9 +44,18 @@
         "plugin:jsdoc/recommended-error",
         "plugin:jsdoc/recommended-typescript",
         "plugin:jsdoc/recommended-typescript-error",
-        "prettier"
+        "prettier",
+        "plugin:editorconfig/all"
       ],
-      "rules": {},
+      "rules": {
+        "at-rule-no-unknown": 0,
+        "scss/at-rule-no-unknown": 2,
+        "scss/dollar-variable-pattern": 1,
+        "scss/selector-no-redundant-nesting-selector": 1,
+        "dtslint/expect-deprecation": "error",
+        "dtslint/expect-type": "error",
+        "dtslint/no-typo": "error"
+      },
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "ecmaVersion": "latest",
@@ -58,7 +67,10 @@
         "eslint-plugin-import",
         "eslint-plugin-jsdoc",
         "eslint-plugin-prefer-arrow",
-        "html"
+        "html",
+        "stylelint-scss",
+        "dtslint",
+        "editorconfig"
       ]
     }
   ]
