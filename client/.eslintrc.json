@@ -30,7 +30,6 @@
             "style": "kebab-case"
           }
         ],
-        "no-console": "error",
         "@typescript-eslint/no-explicit-any": "off"
       }
     },

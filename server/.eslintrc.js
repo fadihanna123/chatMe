@@ -36,7 +36,6 @@ const config = {
   ],
   rules: {
     'jsdoc/no-restricted-syntax': 'off',
-    'no-console': 'error',
     indent: ['error', 2],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],

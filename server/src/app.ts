@@ -32,7 +32,6 @@ export const prisma = new PrismaClient();
 
 io.on('connection', (socket: Socket) => {
   const date: Date = new Date();
-  // eslint-disable-next-line no-console
   console.log(`✅${socket.id} has connected`);
   // storeLog(`${socket.id} has connected`, '', '');
   logger.info(`✅${socket.id} has connected`, '', '');

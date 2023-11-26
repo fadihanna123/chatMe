@@ -28,6 +28,7 @@
     "noImplicitOverride": true,
     "noImplicitThis": true,
     "typeRoots": ["./node_modules/@types", "./src/types"],
+    "types": ["node"],
     "strictNullChecks": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
@@ -49,6 +50,6 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "karma.conf.js", "karmaPackages.d.ts"],
   "exclude": ["node_modules"]
 }

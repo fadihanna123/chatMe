@@ -53,6 +53,8 @@
     "@types/eslint": "^8.44.4",
     "@types/jasmine": "~5.1.0",
     "@types/jest": "^29.5.5",
+    "@types/karma-coverage": "^2.0.3",
+    "@types/karma-jasmine-html-reporter": "^1.7.3",
     "@types/node": "^20.8.4",
     "@types/styled-components": "^5.1.28",
     "@typescript-eslint/eslint-plugin": "6.7.5",
