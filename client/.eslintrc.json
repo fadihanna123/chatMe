@@ -10,41 +10,23 @@
       "files": ["*.ts"],
       "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:@typescript-eslint/recommended"
       ],
       "rules": {
-        "@angular-eslint/directive-selector": [
-          "error",
-          {
-            "type": "attribute",
-            "prefix": "app",
-            "style": "camelCase"
-          }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "style": "kebab-case"
-          }
-        ],
         "@typescript-eslint/no-explicit-any": "off"
       }
     },
     {
       "files": ["*.html"],
       "extends": [
-        "plugin:@angular-eslint/template/recommended",
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:jsdoc/recommended",
         "plugin:jsdoc/recommended-error",
         "plugin:jsdoc/recommended-typescript",
         "plugin:jsdoc/recommended-typescript-error",
-        "prettier",
-        "plugin:editorconfig/all"
+        "plugin:editorconfig/all",
+        "prettier"
       ],
       "rules": {
         "at-rule-no-unknown": 0,
@@ -65,8 +47,6 @@
         "jsdoc",
         "eslint-plugin-import",
         "eslint-plugin-jsdoc",
-        "eslint-plugin-prefer-arrow",
-        "html",
         "stylelint-scss",
         "dtslint",
         "editorconfig"

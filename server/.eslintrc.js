@@ -29,10 +29,8 @@ const config = {
     'jsdoc',
     'eslint-plugin-import',
     'eslint-plugin-jsdoc',
-    'eslint-plugin-prefer-arrow',
     'dtslint',
     'editorconfig',
-    'eslint-plugin-tsdoc',
   ],
   rules: {
     'jsdoc/no-restricted-syntax': 'off',

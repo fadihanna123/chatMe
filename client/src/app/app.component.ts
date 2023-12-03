@@ -5,8 +5,6 @@ import {
   faRightToBracket,
   faSignal,
 } from '@fortawesome/free-solid-svg-icons';
-import load from 'audio-loader';
-import play from 'audio-play';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
@@ -41,7 +39,6 @@ export class AppComponent implements OnInit {
   ) {
     dayjs.extend(relativeTime);
     this.chat.getMessage().subscribe((data: MessageList) => {
-      load('../assets/chat_alert.mp3').then(play);
       this.msgList.push(data);
     });
 

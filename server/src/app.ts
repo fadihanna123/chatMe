@@ -1,12 +1,9 @@
 import 'dotenv/config.js';
 import { PrismaClient } from '@prisma/client';
-import { instrument } from '@socket.io/admin-ui';
 import type { Socket } from 'socket.io';
 import { Server } from 'socket.io';
 import { logger } from 'tools';
 import {
-  adminPsw,
-  adminUname,
   debuggingUrl,
   originUrl,
   serverPort,
@@ -19,14 +16,6 @@ const io = new Server(Number(serverPort), {
   },
 });
 
-instrument(io, {
-  auth: {
-    type: 'basic',
-    username: adminUname as string,
-    password: adminPsw as string,
-  },
-  mode: process.env.NODE_ENV === 'development' ? 'development' : 'production',
-});
 
 export const prisma = new PrismaClient();
 

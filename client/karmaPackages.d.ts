@@ -1,4 +1,3 @@
-declare module 'karma-jasmine';
 declare module 'karma-chrome-launcher';
 declare module 'karma-jasmine-html-reporter';
 declare module 'karma-coverage';
