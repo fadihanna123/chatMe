@@ -10,9 +10,9 @@ if (environment.production) {
   console.log = () => {};
   console.warn = () => {};
 } else {
-  console.log("It's looks like we are in a development mode!");
+  console.log("🤔 It's looks like we are in a development mode!");
 }
 
 platformBrowserDynamic()
   .bootstrapModule(AppModule)
-  .catch((err) => console.error(err));
+  .catch((err) => console.error(`❌ ${err}`));

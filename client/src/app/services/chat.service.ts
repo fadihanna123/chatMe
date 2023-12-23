@@ -14,9 +14,9 @@ export class ChatService {
     this.socket = io(serverUrl);
 
     this.socket.on('connect_error', (err) => {
-      console.log(err instanceof Error);
-      console.log(err.message);
-      console.log((err as any).data);
+      console.error(`❌ ${err instanceof Error}`);
+      console.error(`❌ ${err.message}`);
+      console.error(`❌ ${(err as any).data}`);
       this.socket.connect();
     });
 
