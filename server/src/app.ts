@@ -3,11 +3,7 @@ import { PrismaClient } from '@prisma/client';
 import type { Socket } from 'socket.io';
 import { Server } from 'socket.io';
 import { logger } from 'tools';
-import {
-  debuggingUrl,
-  originUrl,
-  serverPort,
-} from 'utils';
+import { debuggingUrl, originUrl, serverPort } from 'utils';
 
 const io = new Server(Number(serverPort), {
   cors: {
@@ -15,7 +11,6 @@ const io = new Server(Number(serverPort), {
     credentials: true,
   },
 });
-
 
 export const prisma = new PrismaClient();
 

@@ -1,6 +1,6 @@
 {
   "name": "chatme_client",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "license": "MIT",
   "lastUpgrade": "20231011",
   "author": {
@@ -19,48 +19,51 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^17.0.8",
-    "@angular/common": "^17.0.8",
-    "@angular/compiler": "^17.0.8",
-    "@angular/core": "^17.0.8",
-    "@angular/forms": "^17.0.8",
-    "@angular/platform-browser": "^17.0.8",
-    "@angular/platform-browser-dynamic": "^17.0.8",
+    "@angular/animations": "^17.0.9",
+    "@angular/common": "^17.0.9",
+    "@angular/compiler": "^17.0.9",
+    "@angular/core": "^17.0.9",
+    "@angular/forms": "^17.0.9",
+    "@angular/platform-browser": "^17.0.9",
+    "@angular/platform-browser-dynamic": "^17.0.9",
     "@fortawesome/angular-fontawesome": "^0.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "bootstrap": "5.3.2",
     "dayjs": "^1.11.10",
     "rxjs": "~7.8.1",
-    "socket.io-client": "^4.7.2",
-    "zone.js": "~0.14.2"
+    "socket.io-client": "^4.7.3",
+    "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.0.8",
-    "@angular/compiler-cli": "^17.0.8",
+    "@angular-devkit/build-angular": "^17.0.10",
+    "@angular/compiler-cli": "^17.0.9",
     "@types/jasmine": "~5.1.4",
-    "@types/node": "^20.10.5",
-    "@typescript-eslint/eslint-plugin": "6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@types/node": "^20.10.8",
+    "@typescript-eslint/eslint-plugin": "6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-dtslint": "^3.0.2",
     "eslint-plugin-editorconfig": "^4.0.3",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsdoc": "^46.9.1",
-    "eslint-plugin-prettier": "^5.1.2",
+    "eslint-plugin-jsdoc": "^48.0.2",
+    "eslint-plugin-prettier": "^5.1.3",
     "jasmine-core": "~5.1.1",
     "karma": "~6.4.2",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.1",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.1.1",
-    "sass": "^1.69.5",
+    "sass": "^1.69.7",
     "stylelint-scss": "^6.0.0",
     "typescript": "5.2.2"
   },
   "engines": {
     "node": ">=14.12.0",
     "npm": "Please use Yarn instead of Npm to install dependencies"
+  },
+  "config": {
+    "port": 4200
   }
 }
