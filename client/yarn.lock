@@ -1803,10 +1803,10 @@
   dependencies:
     undici-types "~5.25.1"
 
-"@types/node@^20.10.8":
-  version "20.10.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.8.tgz#f1e223cbde9e25696661d167a5b93a9b2a5d57c7"
-  integrity sha512-f8nQs3cLxbAFc00vEU59yf9UyGUftkPaLGfvbVOIDdx2i1b8epBqj2aNGyP19fiyXWvlmZ7qC1XLjAzw/OKIeA==
+"@types/node@^20.11.0":
+  version "20.11.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.11.0.tgz#8e0b99e70c0c1ade1a86c4a282f7b7ef87c9552f"
+  integrity sha512-o9bjXmDNcF7GbM4CNQpmi+TutCgap/K3w1JyKgxAjqx41zp9qlIAVFi0IhCNsJcXolEqLWhbFbEeL0PvYm4pcQ==
   dependencies:
     undici-types "~5.26.4"
 
@@ -5920,10 +5920,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.1.1.tgz#6ba9f23165d690b6cbdaa88cb0807278f7019848"
-  integrity sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==
+prettier@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.1.tgz#babf33580e16c796a9740b9fae551624f7bfeaab"
+  integrity sha512-qSUWshj1IobVbKc226Gw2pync27t0Kf0EdufZa9j7uBSJay1CC+B3K5lAAZoqgX3ASiKuWsk6OmzKRetXNObWg==
 
 pretty-bytes@^5.3.0:
   version "5.6.0"
@@ -6498,10 +6498,10 @@ socket.io-client@^4.4.1:
     engine.io-client "~6.5.2"
     socket.io-parser "~4.2.4"
 
-socket.io-client@^4.7.3:
-  version "4.7.3"
-  resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.7.3.tgz#b49e006fc1ccaea65229a4b435c083b10439ecc4"
-  integrity sha512-nU+ywttCyBitXIl9Xe0RSEfek4LneYkJxCeNnKCuhwoH4jGXO1ipIUw/VA/+Vvv2G1MTym11fzFC0SxkrcfXDw==
+socket.io-client@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-4.7.4.tgz#5f0e060ff34ac0a4b4c5abaaa88e0d1d928c64c8"
+  integrity sha512-wh+OkeF0rAVCrABWQBaEjLfb7DVPotMbu0cgWgyR0v6eA4EoVnAwcIeIbcdTE3GT/H3kbdLl7OoH2+asoDRIIg==
   dependencies:
     "@socket.io/component-emitter" "~3.1.0"
     debug "~4.3.2"
@@ -6980,7 +6980,7 @@ typed-assert@^1.0.8:
   resolved "https://registry.yarnpkg.com/typed-assert/-/typed-assert-1.0.9.tgz#8af9d4f93432c4970ec717e3006f33f135b06213"
   integrity sha512-KNNZtayBCtmnNmbo5mG47p1XsCyrx6iVqomjcZnec/1Y5GGARaxPs6r49RnSPeUP3YjNYiU9sQHAtY4BBvnZwg==
 
-typescript@5.2.0:
+typescript@5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.2.2.tgz#5ebb5e5a5b75f085f22bc3f8460fba308310fa78"
   integrity sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==

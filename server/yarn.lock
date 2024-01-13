@@ -387,10 +387,10 @@
   dependencies:
     "@types/ms" "*"
 
-"@types/eslint@^8.56.1":
-  version "8.56.1"
-  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.56.1.tgz#988cabb39c973e9200f35fdbb29d17992965bb08"
-  integrity sha512-18PLWRzhy9glDQp3+wOgfLYRWlhgX0azxgJ63rdpoUHyrC9z0f5CkFburjQx4uD7ZCruw85ZtMt6K+L+R8fLJQ==
+"@types/eslint@^8.56.2":
+  version "8.56.2"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.56.2.tgz#1c72a9b794aa26a8b94ad26d5b9aa51c8a6384bb"
+  integrity sha512-uQDwm1wFHmbBbCZCqAlq6Do9LYwByNZHWzXppSnay9SuwJ+VRbjkbLABer54kcPnMSlG6Fdiy2yaFXm/z9Z5gw==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -3295,10 +3295,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.1.1.tgz#6ba9f23165d690b6cbdaa88cb0807278f7019848"
-  integrity sha512-22UbSzg8luF4UuZtzgiUOfcGM8s4tjBv6dJRT7j275NXsy2jb4aJa4NNveul5x4eqlF1wuhuR2RElK71RvmVaw==
+prettier@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.1.tgz#babf33580e16c796a9740b9fae551624f7bfeaab"
+  integrity sha512-qSUWshj1IobVbKc226Gw2pync27t0Kf0EdufZa9j7uBSJay1CC+B3K5lAAZoqgX3ASiKuWsk6OmzKRetXNObWg==
 
 prisma-docs-generator@^0.8.0:
   version "0.8.0"
@@ -3698,10 +3698,10 @@ socket.io-parser@~4.2.4:
     "@socket.io/component-emitter" "~3.1.0"
     debug "~4.3.1"
 
-socket.io@^4.7.3:
-  version "4.7.3"
-  resolved "https://registry.yarnpkg.com/socket.io/-/socket.io-4.7.3.tgz#a0f1a4511eb23fe182ae3a018875a31501be3ffc"
-  integrity sha512-SE+UIQXBQE+GPG2oszWMlsEmWtHVqw/h1VrYJGK5/MC7CH5p58N448HwIrtREcvR4jfdOJAY4ieQfxMr55qbbw==
+socket.io@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/socket.io/-/socket.io-4.7.4.tgz#2401a2d7101e4bdc64da80b140d5d8b6a8c7738b"
+  integrity sha512-DcotgfP1Zg9iP/dH9zvAQcWrE0TtbMVwXmlV4T4mqsvY+gw+LqUGPfx2AoVyRk0FLME+GQhufDMyacFmw7ksqw==
   dependencies:
     accepts "~1.3.4"
     base64id "~2.0.0"
