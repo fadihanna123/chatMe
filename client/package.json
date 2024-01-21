@@ -1,6 +1,6 @@
 {
   "name": "chatme_client",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "license": "UNLICENSED",
   "homepage": "http://localhost:4200/",
   "repository": {
@@ -27,13 +27,13 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^17.0.9",
-    "@angular/common": "^17.0.9",
-    "@angular/compiler": "^17.0.9",
-    "@angular/core": "^17.0.9",
-    "@angular/forms": "^17.0.9",
-    "@angular/platform-browser": "^17.0.9",
-    "@angular/platform-browser-dynamic": "^17.0.9",
+    "@angular/animations": "^17.1.0",
+    "@angular/common": "^17.1.0",
+    "@angular/compiler": "^17.1.0",
+    "@angular/core": "^17.1.0",
+    "@angular/forms": "^17.1.0",
+    "@angular/platform-browser": "^17.1.0",
+    "@angular/platform-browser-dynamic": "^17.1.0",
     "@fortawesome/angular-fontawesome": "^0.14.1",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
@@ -44,12 +44,12 @@
     "zone.js": "~0.14.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.0.10",
-    "@angular/compiler-cli": "^17.0.9",
+    "@angular-devkit/build-angular": "^17.1.0",
+    "@angular/compiler-cli": "^17.1.0",
     "@types/jasmine": "~5.1.4",
-    "@types/node": "^20.11.0",
-    "@typescript-eslint/eslint-plugin": "6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
+    "@types/node": "^20.11.5",
+    "@typescript-eslint/eslint-plugin": "6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-dtslint": "^3.0.2",
@@ -62,10 +62,10 @@
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.1",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "prettier": "^3.2.2",
-    "sass": "^1.69.7",
-    "stylelint-scss": "^6.0.0",
-    "typescript": "5.2.2"
+    "prettier": "^3.2.4",
+    "sass": "^1.70.0",
+    "stylelint-scss": "^6.1.0",
+    "typescript": "5.3.3"
   },
   "engines": {
     "node": ">=14.12.0",
