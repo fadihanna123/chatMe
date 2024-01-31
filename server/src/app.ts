@@ -1,9 +1,9 @@
 import 'dotenv/config.js';
+import { logger } from './tools';
+import { debuggingUrl, originUrl, serverPort } from './utils';
 import { PrismaClient } from '@prisma/client';
 import type { Socket } from 'socket.io';
 import { Server } from 'socket.io';
-import { logger } from 'tools';
-import { debuggingUrl, originUrl, serverPort } from 'utils';
 
 const io = new Server(Number(serverPort), {
   cors: {

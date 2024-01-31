@@ -1,13 +1,12 @@
 {
   "ts-node": {
-    "files": true
+    "files": true,
   },
   "compilerOptions": {
     "target": "esNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "alwaysStrict": true,
     "outDir": "dist",
-    "baseUrl": "src",
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -30,16 +29,15 @@
     "strictFunctionTypes": true,
     "strictPropertyInitialization": true,
     "useUnknownInCatchVariables": false,
-    "rootDir": ".",
     "noUnusedLocals": true,
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "removeComments": true,
     "paths": {
-      "@core/*": ["src/*"]
-    }
+      "@core/*": ["./src/*"],
+    },
   },
   "include": ["src/**/*", ".eslintrc.js"],
   "files": ["src/types/global.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
 }
