@@ -69,8 +69,7 @@
   },
   "engines": {
     "node": ">=14.12.0",
-    "npm": "Please use Yarn instead of Npm to install dependencies",
-    "pnpm": "Please use Yarn instead of Pnpm to install dependencies"
+    "npm": "Please use Yarn instead of Npm to install dependencies"
   },
   "config": {
     "port": 4200

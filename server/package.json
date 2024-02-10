@@ -22,7 +22,6 @@
     "build": "tsc",
     "lint": "eslint .",
     "format": "prettier -w .",
-    "postinstall": "prisma db push && prisma db pull && prisma generate",
     "seed-migrate": "prisma migrate dev",
     "seed-delete": "prisma migrate reset"
   },
@@ -64,8 +63,7 @@
   },
   "engines": {
     "node": ">=16.0.0 <=21.x.x",
-    "npm": "Please use Yarn instead of Npm to install dependencies",
-    "pnpm": "Please use Yarn instead of Pnpm to install dependencies"
+    "npm": "Please use Yarn instead of Npm to install dependencies"  
   },
   "config": {
     "port": 5000

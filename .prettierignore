@@ -1,6 +1,6 @@
 server/node_modules/*
 client/node_modules/*
 client/README.md
-server/pnpm-lock.yaml
-client/pnpm-lock.yaml
+server/yarn.lock
+client/yarn.lock
 AUTHORS
