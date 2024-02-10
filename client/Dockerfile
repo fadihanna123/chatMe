@@ -1,4 +1,4 @@
-FROM node:18.18.1-alpine
+FROM node:21.6.1-alpine
 WORKDIR /app
 COPY ./ .
 RUN npm i -g pnpm serve
