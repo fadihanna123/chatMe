@@ -1,7 +1,7 @@
 {
   "name": "chatme_client",
   "version": "0.0.22",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "homepage": "http://localhost:4200/",
   "repository": {
     "type": "git",
