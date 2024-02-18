@@ -1,8 +1,7 @@
 {
   "name": "chatme_client",
   "version": "0.0.22",
-  "license": "UNLICENSED",
-  "homepage": "http://localhost:4200/",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/fadihanna123/chatMe/tree/main/client"
