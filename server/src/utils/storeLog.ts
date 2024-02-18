@@ -1,4 +1,4 @@
-import { prisma } from '@core/app';
+import { prisma } from 'app';
 import { DateTime } from 'luxon';
 
 /**

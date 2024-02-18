@@ -3,6 +3,7 @@
     "files": true,
   },
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "esNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "alwaysStrict": true,
@@ -33,9 +34,6 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUncheckedIndexedAccess": true,
     "removeComments": true,
-    "paths": {
-      "@core/*": ["./src/*"],
-    },
   },
   "include": ["src/**/*", ".eslintrc.js"],
   "files": ["src/types/global.d.ts"],
