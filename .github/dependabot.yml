@@ -1,13 +1,13 @@
 version: 2
 updates:
   - package-ecosystem: "yarn"
-    directory: "server" 
+    directory: "/server" 
     schedule:
-      interval: "monthly"
+      interval: "daily"
 
 version: 2
 updates:
   - package-ecosystem: "yarn"
-    directory: "client" 
+    directory: "/client" 
     schedule:
-      interval: "monthly"
+      interval: "daily"
