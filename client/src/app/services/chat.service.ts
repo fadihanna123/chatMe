@@ -93,9 +93,7 @@ export class ChatService {
    * @example this.chat.getStorage("123");
    */
   public getStorage(selected?: string): [] {
-    return JSON.parse(
-      sessionStorage.getItem(selected ? selected : 'All') || '[]'
-    );
+    return JSON.parse(sessionStorage.getItem(selected ?? 'All') ?? '[]');
   }
 
   /**
@@ -112,12 +110,9 @@ export class ChatService {
     if (getCurrentData) {
       getCurrentData.push(data);
 
-      sessionStorage.setItem(
-        selected ? selected : 'All',
-        JSON.stringify(getCurrentData)
-      );
+      sessionStorage.setItem(selected ?? 'All', JSON.stringify(getCurrentData));
     } else {
-      sessionStorage.setItem(selected ? selected : 'All', JSON.stringify([]));
+      sessionStorage.setItem(selected ?? 'All', JSON.stringify([]));
     }
   }
 
@@ -144,7 +139,7 @@ export class ChatService {
    */
   public joinChat(nickName: string, id?: number): void {
     this.socket.emit('join', {
-      userId: id ? id : this.socket.id,
+      userId: id ?? this.socket.id,
       nickname: nickName,
       status: 'online',
     });

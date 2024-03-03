@@ -14,7 +14,6 @@ import { ChatService } from '../services';
 @Component({
   selector: 'msgForm',
   templateUrl: './msg-form.component.html',
-  styleUrls: ['./msg-form.component.scss'],
 })
 export class MsgFormComponent implements OnInit {
   @Input() joinForm!: FormGroup;

@@ -74,7 +74,7 @@ export class AppComponent implements OnInit {
    * @example this.nickNameTyper();
    */
   public nickNameTyper(): void {
-    this.noVal = !this.joinForm.get('nickName')?.value ? true : false;
+    this.noVal = !this.joinForm.get('nickName')?.value;
   }
 
   /**
