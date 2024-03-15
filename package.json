@@ -1,7 +1,6 @@
 {
   "name": "chatme",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://github.com/fadihanna123/chatMe.git",
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
