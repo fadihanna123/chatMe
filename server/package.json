@@ -19,6 +19,8 @@
   },
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register src/app",
+    "postinstall": "yarn seed",
+    "seed": "prisma db push && prisma db pull && prisma generate",
     "build": "tsc",
     "lint": "eslint .",
     "format": "prettier -w .",
