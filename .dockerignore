@@ -1,6 +1,13 @@
+# Dependencies
 server/node_modules
+client/node_modules
+
+# Build
 server/build
 client/build
-client/node_modules
+
+# Git
 .git
+
+# Readme
 README.md
