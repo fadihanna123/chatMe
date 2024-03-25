@@ -64,7 +64,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.72.0",
     "stylelint-scss": "^6.2.1",
-    "typescript": "5.3.3"
+    "typescript": "5.4.3"
   },
   "engines": {
     "node": ">=14.12.0",
