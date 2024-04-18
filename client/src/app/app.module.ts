@@ -7,8 +7,17 @@ import { AppComponent } from './app.component';
 import { MsgFormComponent } from './msg-form/msg-form.component';
 import { ChatService } from './services';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './inc/header/header.component';
+import { MessagesPanelComponent } from './messagesPanel/messagesPanel.component';
+import { OnlineListComponent } from './onlineList/onlineList.component';
 
-const declarations = [AppComponent, MsgFormComponent];
+const declarations = [
+  AppComponent,
+  MsgFormComponent,
+  HeaderComponent,
+  MessagesPanelComponent,
+  OnlineListComponent,
+];
 
 const imports = [
   BrowserModule,
