@@ -1,0 +1,17 @@
+<div class="messagesPanel">
+  <div *ngIf="msgList.length; else noMsgs">
+    <div *ngFor="let msg of msgList">
+      <div
+        [ngClass]="{
+          'bg-success': msg.nickname === joinForm.get('nickName')?.value,
+          'bg-info': msg.nickname !== joinForm.get('nickName')?.value
+        }"
+        class="senderMsg rounded m-2 p-2 border"
+      >
+        <b>{{ msg.nickname }}</b> : {{ msg.message }}
+        <small>{{ extractTime(msg.date) }}</small>
+      </div>
+    </div>
+  </div>
+  <ng-template #noMsgs> No messages yet... </ng-template>
+</div>
