@@ -78,23 +78,6 @@ export class AppComponent implements OnInit {
   }
 
   /**
-   * Opens a room.
-   * @function openNewRoom
-   * @returns { void }
-   * @example this.openNewRoom("Erik", 123);
-   */
-  public openNewRoom(name?: string, id?: string): void {
-    if (!name && !id) {
-      this.chat.openRoom('Group');
-    } else {
-      if (!id) return;
-      this.chat.openRoom(id, 'Private');
-      if (!name) return;
-      this.selectedNickName = name;
-    }
-  }
-
-  /**
    * Handle when a user login.
    * @function enterMe
    * @returns { void }
@@ -122,16 +105,6 @@ export class AppComponent implements OnInit {
     if (e.key === 'Enter') {
       this.enterMe();
     }
-  }
-
-  /**
-   * Parse date time to ago value.
-   * @function extractTime
-   * @returns { string }
-   * @example this.extractTime(20231020);
-   */
-  public extractTime(date: Date): string {
-    return dayjs(date).fromNow();
   }
 
   /**
