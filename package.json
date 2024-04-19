@@ -5,8 +5,12 @@
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "setup": "cd server && yarn && cd .. && cd client && yarn",
+    "setup": "cd server && yarn && yarn seed && cd .. && cd client && yarn",
+    "dev": "concurrently \"cd server && yarn dev\" \"cd client && yarn dev\"",
     "seed": "cd server && yarn seed",
     "clear": "rimraf node_modules && cd server && rimraf node_modules && cd .. && cd client && rimraf node_modules"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
   }
 }
