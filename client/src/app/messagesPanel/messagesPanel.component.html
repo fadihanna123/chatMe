@@ -9,7 +9,7 @@
         class="senderMsg rounded m-2 p-2 border"
       >
         <b>{{ msg.nickname }}</b> : {{ msg.message }}
-        <small>{{ extractTime(msg.date) }}</small>
+        <small>{{ this.settings.extractTime(msg.date) }}</small>
       </div>
     </div>
   </div>

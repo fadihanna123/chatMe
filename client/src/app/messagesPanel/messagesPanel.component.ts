@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { extractTime } from 'app/helper';
+import { SettingsService } from 'app/services';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>
@@ -14,5 +14,6 @@ import { extractTime } from 'app/helper';
 export class MessagesPanelComponent {
   @Input() public msgList: MessageList[] = [];
   @Input() public joinForm!: FormGroup;
-  public extractTime = extractTime;
+
+  constructor(public settings: SettingsService) {}
 }

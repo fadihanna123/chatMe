@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import dayjs from 'dayjs';
 
 @Injectable({
   providedIn: 'root',
@@ -16,5 +17,15 @@ export class SettingsService {
    */
   public setPageTitle(title: string): void {
     this.title.setTitle(title);
+  }
+
+  /**
+   * Parse date time to ago value.
+   * @function extractTime
+   * @returns { string }
+   * @example this.settings.extractTime(20231020);
+   */
+  public extractTime(date: Date): string {
+    return dayjs(date).fromNow();
   }
 }
