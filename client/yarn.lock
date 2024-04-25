@@ -128,10 +128,10 @@
   dependencies:
     tslib "^2.3.0"
 
-"@angular/compiler-cli@^17.3.5":
-  version "17.3.5"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-17.3.5.tgz#d24cb2039d130b03a898ec3bedf7cbabb573ba03"
-  integrity sha512-R53JNbbVDHWSGdL0e2vGQ5iJCrILOWZ1oemKjekOFB93fUBlEyi+nZmm4uTO7RU8PgjB0UpxI6ok5ZE3Amkt6A==
+"@angular/compiler-cli@^17.3.6":
+  version "17.3.6"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-17.3.6.tgz#9992abdb54e9217e85e524798f3492589cf47596"
+  integrity sha512-LaoUkY6uzcNocIEHJBvexvuU0a333IRQaG3Sj5IXhM1t864wTsfycn6yWJcQ7PhklB8BtNqiMbUQuEFtkxT8pg==
   dependencies:
     "@babel/core" "7.23.9"
     "@jridgewell/sourcemap-codec" "^1.4.14"
