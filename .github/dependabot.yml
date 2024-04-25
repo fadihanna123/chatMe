@@ -3,11 +3,11 @@ updates:
   - package-ecosystem: "npm"
     directory: "/server" 
     schedule:
-      interval: "daily"
+      interval: "monthly"
 
 version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/client" 
     schedule:
-      interval: "daily"
+      interval: "monthly"
