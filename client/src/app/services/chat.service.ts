@@ -13,10 +13,10 @@ export class ChatService {
   constructor() {
     this.socket = io(serverUrl);
 
-    this.socket.on('connect_error', (err) => {
+    this.socket.on('connect_error', (err: any) => {
       console.error(`❌ ${err instanceof Error}`);
       console.error(`❌ ${err.message}`);
-      console.error(`❌ ${(err as any).data}`);
+      console.error(`❌ ${err.data}`);
       this.socket.connect();
     });
 
