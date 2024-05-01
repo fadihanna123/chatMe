@@ -62,7 +62,7 @@
     "karma-coverage": "~2.2.1",
     "karma-jasmine-html-reporter": "~2.1.0",
     "prettier": "^3.2.5",
-    "sass": "^1.75.0",
+    "sass": "^1.76.0",
     "stylelint-scss": "^6.2.1",
     "typescript": "5.4.5"
   },
