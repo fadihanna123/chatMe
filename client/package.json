@@ -16,7 +16,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve -o",
+    "dev": "ng serve -o --ssl true --ssl-cert=C:/Users/Fadi_Dev/cert.crt --ssl-key=C:/Users/Fadi_Dev/cert.key",
     "prebuild": "rm -rf dist",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
