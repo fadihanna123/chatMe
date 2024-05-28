@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mysql:latest
+    container_name: chatme_db
+    restart: unless-stopped
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chat_me_db
+      MYSQL_USER: fadi
+      MYSQL_PASSWORD: '0000'
+    volumes:
+      - chatme_db-data:/var/lib/mysql
+
+  adminer:
+    image: adminer:latest
+    container_name: chatme_db_admin
+    ports:
+      - 8080:8080
+    restart: unless-stopped
+    volumes:
+      - chatme_db-admin:/var/lib/db/data
+
+  api:
+    build: ./server
+    container_name: chatme_backend
+    ports:
+      - 5000:5000
+    env_file:
+      - ./server/.env.prod
+    restart: unless-stopped
+    links:
+      - db
+
+  web:
+    build: ./client
+    container_name: chatme_frontend
+    ports:
+      - 4200:4200
+    restart: unless-stopped
+    links:
+      - api
+
+volumes:
+  chatme_db-data:
+  chatme_db-admin:

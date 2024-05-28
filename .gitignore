@@ -31,7 +31,3 @@ yarn-error.log*
 
 # Folder config file
 [Dd]esktop.ini
-
-# Docker
-Dockerfile
-docker-compose.yaml
