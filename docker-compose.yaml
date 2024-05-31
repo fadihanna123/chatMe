@@ -14,7 +14,7 @@ services:
       - chatme_db-data:/var/lib/mysql
 
   adminer:
-    image: adminer:latest
+    image: adminer:standalone
     container_name: chatme_db_admin
     ports:
       - 8080:8080
