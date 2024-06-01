@@ -16,3 +16,12 @@ client/build
 
 README.md
 client/README.md
+
+# License
+
+LICENSE
+
+# Docker
+
+server/Dockerfile
+client/Dockerfile
