@@ -28,7 +28,7 @@ services:
     ports:
       - 5000:5000
     env_file:
-      - ./server/.env.prod
+      - ./server/.env.production
     restart: unless-stopped
     links:
       - db

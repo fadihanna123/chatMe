@@ -1,0 +1,23 @@
+# Dependencies
+
+node_modules
+
+# Docker
+
+Dockerfile
+
+# Docs
+
+dbDocs
+
+# Logs
+
+src/logs
+
+# Enviroment
+
+.env
+
+# Docker
+
+Dockerfile

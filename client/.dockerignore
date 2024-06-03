@@ -1,0 +1,21 @@
+# Dependencies
+
+node_modules
+
+# Docker
+
+Dockerfile
+
+# Enviroment
+
+.env
+
+# Tests
+src/test.ts
+
+# Git
+.gitignore
+
+# Config
+karma.conf.js
+tsconfig.spec.json
