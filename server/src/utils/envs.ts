@@ -1,12 +1,12 @@
 const {
-  PORT,
+  DEV_PORT,
   ORIGIN_URL,
   DEBUGGING_ADMIN_URL,
   DEBUGGING_ADMIN_USERNAME,
   DEBUGGING_ADMIN_PSW,
 } = process.env;
 
-export const serverPort = PORT;
+export const serverPort = DEV_PORT;
 
 /**
  * @type { string | undefined }

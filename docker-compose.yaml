@@ -13,14 +13,19 @@ services:
     volumes:
       - chatme_db-data:/var/lib/mysql
 
-  adminer:
-    image: adminer:standalone
+  db_admin:
+    image: phpmyadmin:latest
     container_name: chatme_db_admin
     ports:
-      - 8080:8080
+      - '8080:80'
     restart: unless-stopped
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
     volumes:
       - chatme_db-admin:/var/lib/db/data
+    depends_on:
+      - db
 
   api:
     build: ./server
@@ -28,8 +33,10 @@ services:
     ports:
       - 5000:5000
     env_file:
-      - ./server/.env.production
+      - ./server/.docker.env
     restart: unless-stopped
+    volumes:
+      - ./server/:/backend
     links:
       - db
 

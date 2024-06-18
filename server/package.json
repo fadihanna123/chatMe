@@ -18,7 +18,7 @@
     "email": "fhanna181@gmail.com"
   },
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register src/app",
+    "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
     "seed": "prisma db push && prisma db pull && prisma generate",
     "build": "tsc",
     "lint": "eslint .",
@@ -63,10 +63,7 @@
     "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=16.0.0 <=21.x.x",
+    "node": ">=16.0.0 <=23.x.x",
     "npm": "Please use Yarn instead of Npm to install dependencies"
-  },
-  "config": {
-    "port": 5000
   }
 }
