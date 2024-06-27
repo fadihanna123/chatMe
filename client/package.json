@@ -16,7 +16,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "dev": "ng serve -o --ssl true --ssl-cert=C:/Users/Fadi_Dev/cert.crt --ssl-key=C:/Users/Fadi_Dev/cert.key",
+    "dev": "ng serve --host 0.0.0.0 --poll 2000",
     "prebuild": "rm -rf dist",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -56,6 +56,7 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsdoc": "^48.2.3",
     "eslint-plugin-prettier": "^5.1.3",
+    "htmlhint": "^1.1.4",
     "jasmine-core": "~5.1.2",
     "karma": "~6.4.3",
     "karma-chrome-launcher": "~3.2.0",
