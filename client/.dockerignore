@@ -1,13 +1,11 @@
 # Dependencies
-
 node_modules
 
 # Docker
-
 Dockerfile
+.dockerignore
 
 # Enviroment
-
 .env
 
 # Tests
@@ -19,3 +17,4 @@ src/test.ts
 # Config
 karma.conf.js
 tsconfig.spec.json
+.editorconfig

@@ -5,3 +5,4 @@ server/yarn.lock
 client/yarn.lock
 AUTHORS
 README.md
+.dockerignore
