@@ -2,9 +2,7 @@ services:
   db:
     image: mysql:lts-oraclelinux9
     container_name: chatme_db
-    restart: unless-stopped
-    ports:
-      - 3306:3306
+    restart: no
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: chat_me_db
@@ -18,7 +16,7 @@ services:
     container_name: chatme_db_admin
     ports:
       - '8080:80'
-    restart: unless-stopped
+    restart: no
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root
@@ -34,7 +32,7 @@ services:
       - 5000:5000
     env_file:
       - ./server/.docker.env
-    restart: unless-stopped
+    restart: no
     volumes:
       - ./server/:/backend
       - /backend/node_modules
@@ -49,7 +47,7 @@ services:
     volumes:
       - ./client/:/frontend
       - /frontend/node_modules
-    restart: unless-stopped
+    restart: no
     links:
       - api
 

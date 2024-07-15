@@ -31,3 +31,6 @@ yarn-error.log*
 
 # Folder config file
 [Dd]esktop.ini
+
+# Scripts
+run.sh
