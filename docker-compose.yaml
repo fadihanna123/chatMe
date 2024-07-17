@@ -3,6 +3,8 @@ services:
     image: mysql:lts-oraclelinux9
     container_name: chatme_db
     restart: no
+    ports:
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: chat_me_db

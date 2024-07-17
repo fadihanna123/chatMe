@@ -1,6 +1,6 @@
-FROM node:20.15.0-alpine3.20
+FROM node:20.15.1-alpine3.20
 WORKDIR /backend
-COPY yarn.lock package.json .
+COPY yarn.lock package.json ./
 RUN npm i -g --silent prisma ts-node-dev
 RUN yarn --silent
 COPY . .
