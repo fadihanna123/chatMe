@@ -37,7 +37,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "bootstrap": "5.3.3",
-    "dayjs": "^1.11.12",
+    "dayjs": "^1.11.13",
     "rxjs": "~7.8.1",
     "socket.io-client": "^4.7.5",
     "zone.js": "~0.14.8"
