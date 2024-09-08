@@ -2,7 +2,7 @@
   <form class="p-2" [formGroup]="joinForm">
     <div class="container-fluid">
       <div class="row mb-3">
-        <div class="col-md-8">
+        <div class="col-8">
           <input
             placeholder="Nickname"
             type="text"
@@ -16,7 +16,7 @@
             Please fill your nickName!
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-4">
           <button
             aria-label="Join button"
             (click)="enterMe()"
@@ -33,7 +33,7 @@
 </div>
 <Header [login]="login"></Header>
 <div class="row mb-3 m-0" *ngIf="login">
-  <div class="col-md-10">
+  <div class="col-10">
     <h4>Welcome {{ joinForm.get('nickName')?.value }}</h4>
     <MessagesPanel [joinForm]="joinForm" [msgList]="msgList"></MessagesPanel>
     <msgForm
@@ -42,7 +42,7 @@
       [joinForm]="joinForm"
     ></msgForm>
   </div>
-  <div class="col-md-1">
+  <div class="col-2">
     <OnlineList
       [selectedNickName]="selectedNickName"
       [onlineList]="onlineList"

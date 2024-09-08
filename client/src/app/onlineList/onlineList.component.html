@@ -6,7 +6,7 @@
     [icon]="dotIcon"
     [ngClass]="{
       'text-success': user.status === 'online',
-      'text-light': user.status === 'offline'
+      'text-light': user.status === 'offline',
     }"
   ></fa-icon>
   <button (click)="openNewRoom(user.nickname, user.userId)">

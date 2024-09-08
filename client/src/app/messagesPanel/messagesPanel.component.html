@@ -3,13 +3,20 @@
     <div *ngFor="let msg of msgList">
       <div
         [ngClass]="{
-          'bg-success': msg.nickname === joinForm.get('nickName')?.value,
-          'bg-info': msg.nickname !== joinForm.get('nickName')?.value
+          'bg-success float-end':
+            msg.nickname === joinForm.get('nickName')?.value,
+          'bg-info float-start':
+            msg.nickname !== joinForm.get('nickName')?.value,
         }"
         class="senderMsg rounded m-2 p-2 border"
       >
         <b>{{ msg.nickname }}</b> : {{ msg.message }}
-        <small>{{ this.settings.extractTime(msg.date) }}</small>
+        <br />
+        <div class="mt-2">
+          <small class="text-end offset-6">{{
+            this.settings.extractTime(msg.date)
+          }}</small>
+        </div>
       </div>
     </div>
   </div>
