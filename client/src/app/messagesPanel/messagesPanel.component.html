@@ -3,10 +3,8 @@
     <div *ngFor="let msg of msgList">
       <div
         [ngClass]="{
-          'bg-success float-end':
-            msg.nickname === joinForm.get('nickName')?.value,
-          'bg-info float-start':
-            msg.nickname !== joinForm.get('nickName')?.value,
+          'bg-success': msg.nickname === joinForm.get('nickName')?.value,
+          'bg-info': msg.nickname !== joinForm.get('nickName')?.value,
         }"
         class="senderMsg rounded m-2 p-2 border"
       >

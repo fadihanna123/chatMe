@@ -1,6 +1,7 @@
 <fa-icon [icon]="onlineIcon"></fa-icon> OnlineList
 <br />
-<button (click)="openNewRoom()">All</button>
+<!-- <button (click)="openNewRoom()">All</button> -->
+All
 <div *ngFor="let user of onlineList">
   <fa-icon
     [icon]="dotIcon"
@@ -9,7 +10,7 @@
       'text-light': user.status === 'offline',
     }"
   ></fa-icon>
-  <button (click)="openNewRoom(user.nickname, user.userId)">
-    {{ user.nickname }}
-  </button>
+  <!-- <button (click)="openNewRoom(user.nickname, user.userId)"> -->
+  {{ user.nickname }}
+  <!-- </button> -->
 </div>

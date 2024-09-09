@@ -129,6 +129,21 @@ export class ChatService {
     });
   }
 
+  public findIfOnlineUserExists(
+    nickName: string,
+    onlineList: OnlineList[],
+    id?: number
+  ) {
+    const foundOnlineUser = onlineList.find(
+      (user) => user.nickname === nickName
+    );
+    if (foundOnlineUser) {
+      return true;
+    }
+
+    return false;
+  }
+
   /**
    * Send the new nickname to backend.
    * @function joinChat
@@ -137,7 +152,11 @@ export class ChatService {
    * @returns { void }
    * @example this.chat.joinChat("Erik", 123);
    */
-  public joinChat(nickName: string, id?: number): void {
+  public joinChat(
+    nickName: string,
+    onlineList: OnlineList[],
+    id?: number
+  ): void {
     this.socket.emit('join', {
       userId: id ?? this.socket.id,
       nickname: nickName,

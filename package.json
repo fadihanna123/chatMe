@@ -1,16 +1,16 @@
 {
   "name": "chatme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/fadihanna123/chatMe.git",
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "setup": "cd server && yarn --silent && yarn seed && cd .. && cd client && yarn --silent",
+    "setup": "yarn --silent --emoji --ignore-scripts && cd server && yarn --silent --emoji --ignore-scripts && cd .. && cd client && yarn --silent --emoji --ignore-scripts",
     "dev": "concurrently \"cd server && yarn dev\" \"cd client && yarn dev\"",
     "seed": "cd server && yarn seed",
     "clear": "rimraf node_modules && cd server && rimraf node_modules && cd .. && cd client && rimraf node_modules"
   },
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^9.0.0"
   }
 }

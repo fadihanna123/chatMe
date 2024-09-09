@@ -15,6 +15,9 @@
           <div *ngIf="noVal" class="text-danger">
             Please fill your nickName!
           </div>
+          <div *ngIf="errorVal" class="text-nowrap" class="text-danger">
+            {{ errorVal }}
+          </div>
         </div>
         <div class="col-4">
           <button
@@ -42,7 +45,7 @@
       [joinForm]="joinForm"
     ></msgForm>
   </div>
-  <div class="col-2">
+  <div class="col-2 overflow-visible">
     <OnlineList
       [selectedNickName]="selectedNickName"
       [onlineList]="onlineList"

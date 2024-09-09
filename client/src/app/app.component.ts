@@ -24,6 +24,7 @@ export class AppComponent implements OnInit {
   public joinForm!: FormGroup;
   public login: boolean = false;
   public noVal: boolean = false;
+  public errorVal: string = '';
   public userId: string = '';
   public msgList: MessageList[] = [];
   public onlineList: OnlineList[] = [];
@@ -87,9 +88,17 @@ export class AppComponent implements OnInit {
     if (!this.joinForm.get('nickName')?.value) {
       this.noVal = true;
       return;
+    } else if (
+      this.chat.findIfOnlineUserExists(
+        this.joinForm.get('nickName')?.value,
+        this.onlineList
+      )
+    ) {
+      this.errorVal = 'This nickName exists. Please choose another nickName!';
+      return;
     }
 
-    this.chat.joinChat(this.joinForm.get('nickName')?.value);
+    this.chat.joinChat(this.joinForm.get('nickName')?.value, this.onlineList);
     this.login = true;
     this.settings.setPageTitle('chatMe - Chat Room');
   }
