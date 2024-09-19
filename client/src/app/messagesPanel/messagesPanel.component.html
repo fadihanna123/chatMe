@@ -1,4 +1,4 @@
-<div class="messagesPanel">
+<div class="messages-panel">
   <div *ngIf="msgList.length; else noMsgs">
     <div *ngFor="let msg of msgList">
       <div
@@ -6,7 +6,7 @@
           'bg-success': msg.nickname === joinForm.get('nickName')?.value,
           'bg-info': msg.nickname !== joinForm.get('nickName')?.value,
         }"
-        class="senderMsg rounded m-2 p-2 border"
+        class="sender-msg rounded m-2 p-2 border"
       >
         <b>{{ msg.nickname }}</b> : {{ msg.message }}
         <br />
