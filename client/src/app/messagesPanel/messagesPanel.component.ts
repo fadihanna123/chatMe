@@ -7,9 +7,10 @@ import { SettingsService } from 'app/services';
  */
 
 @Component({
-  selector: 'MessagesPanel',
-  templateUrl: './messagesPanel.component.html',
-  styleUrls: ['./messagesPanel.component.scss'],
+    selector: 'MessagesPanel',
+    templateUrl: './messagesPanel.component.html',
+    styleUrls: ['./messagesPanel.component.scss'],
+    standalone: false
 })
 export class MessagesPanelComponent {
   @Input() public msgList: MessageList[] = [];

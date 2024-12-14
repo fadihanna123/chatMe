@@ -12,8 +12,9 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { ChatService } from '../services';
 
 @Component({
-  selector: 'msgForm',
-  templateUrl: './msg-form.component.html',
+    selector: 'msgForm',
+    templateUrl: './msg-form.component.html',
+    standalone: false
 })
 export class MsgFormComponent implements OnInit {
   @Input() joinForm!: FormGroup;

@@ -3,8 +3,9 @@ import { faCircle, faSignal } from '@fortawesome/free-solid-svg-icons';
 import { ChatService } from 'app/services';
 
 @Component({
-  selector: 'OnlineList',
-  templateUrl: './onlineList.component.html',
+    selector: 'OnlineList',
+    templateUrl: './onlineList.component.html',
+    standalone: false
 })
 export class OnlineListComponent {
   @Input() public onlineList!: OnlineList[];
