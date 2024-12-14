@@ -54,6 +54,14 @@ io.on('connection', (socket: Socket) => {
     socket.broadcast.emit('login', true);
   });
 
+  socket.on('typing started', (nickName: string) => {
+    socket.broadcast.emit('typing started', nickName);
+  });
+
+  socket.on('typing stopped', () => {
+    socket.broadcast.emit('typing stopped');
+  });
+
   socket.on('disconnect', () => {
     /**
      * @param { string } userId

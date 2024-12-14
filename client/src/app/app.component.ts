@@ -16,10 +16,10 @@ import { ChatService } from './services/chat.service';
  */
 
 @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    standalone: false
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
+  standalone: false,
 })
 export class AppComponent implements OnInit {
   public joinForm!: FormGroup;
@@ -34,14 +34,26 @@ export class AppComponent implements OnInit {
   public dotIcon = faCircle;
   public isSender: boolean = false;
   public selectedNickName: string = '';
+  public isTyping: boolean = false;
+  public typingUser: string = '';
 
   constructor(
-    private chat: ChatService,
+    public chat: ChatService,
     private settings: SettingsService
   ) {
     dayjs.extend(relativeTime);
     this.chat.getMessage().subscribe((data: MessageList) => {
       this.msgList.push(data);
+    });
+
+    this.chat.getTypingStarted().subscribe((nickName: string) => {
+      this.isTyping = true;
+      this.typingUser = nickName;
+    });
+
+    this.chat.getTypingStopped().subscribe(() => {
+      this.isTyping = false;
+      this.typingUser = '';
     });
 
     this.chat

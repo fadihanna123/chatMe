@@ -12,20 +12,22 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { ChatService } from '../services';
 
 @Component({
-    selector: 'msgForm',
-    templateUrl: './msg-form.component.html',
-    standalone: false
+  selector: 'msgForm',
+  templateUrl: './msg-form.component.html',
+  standalone: false,
 })
 export class MsgFormComponent implements OnInit {
-  @Input() joinForm!: FormGroup;
-  @Input() msgList!: MessageList[];
-  @Input() selectedNickName!: string;
+  @Input() public joinForm!: FormGroup;
+  @Input() public msgList!: MessageList[];
+  @Input() public selectedNickName!: string;
+  @Input() public isTyping!: boolean;
+  @Input() public typingUser!: string;
   @ViewChild('msgInput', { static: true }) msgInput!: ElementRef;
 
   public msgForm!: FormGroup;
   public sendIcon = faPaperPlane;
 
-  constructor(private chat: ChatService) {}
+  constructor(public chat: ChatService) {}
 
   /**
    * Init message-form.

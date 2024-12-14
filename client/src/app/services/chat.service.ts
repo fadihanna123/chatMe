@@ -53,6 +53,22 @@ export class ChatService {
     });
   }
 
+  public getTypingStarted(): Observable<any> {
+    return new Observable<string>((observer) => {
+      this.socket.on('typing started', (data) => observer.next(data));
+
+      return () => this.socket.disconnect();
+    });
+  }
+
+  public getTypingStopped(): Observable<any> {
+    return new Observable((observer) => {
+      this.socket.on('typing stopped', (data) => observer.next(data));
+
+      return () => this.socket.disconnect();
+    });
+  }
+
   /**
    * Detect when a user disconnects.
    * @function disconnect
@@ -65,6 +81,21 @@ export class ChatService {
 
       return () => this.socket.disconnect();
     });
+  }
+
+  public handleTyping(isTyping: boolean, typingUser: string): void {
+    let typingTimeOut: ReturnType<typeof setTimeout> | undefined = undefined;
+
+    if (!isTyping) {
+      isTyping = true;
+      this.socket.emit('typing started', typingUser);
+    }
+
+    clearTimeout(typingTimeOut);
+    typingTimeOut = setTimeout(() => {
+      isTyping = false;
+      this.socket.emit('typing stopped');
+    }, 5000);
   }
 
   /**

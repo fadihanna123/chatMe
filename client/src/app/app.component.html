@@ -37,12 +37,25 @@
 <Header [login]="login"></Header>
 <div class="row mb-3 m-0" *ngIf="login">
   <div class="col-10">
-    <h4>Welcome {{ joinForm.get('nickName')?.value }}</h4>
+    <h4>
+      Welcome
+      {{
+        joinForm.get('nickName')?.value[0].toUpperCase() +
+          joinForm.get('nickName')?.value.slice(1)
+      }}
+    </h4>
     <MessagesPanel [joinForm]="joinForm" [msgList]="msgList"></MessagesPanel>
+    <p *ngIf="typingUser">{{ typingUser }} is typing...</p>
     <msgForm
       [id]="selectedNickName"
       [msgList]="msgList"
       [joinForm]="joinForm"
+      [selectedNickName]="selectedNickName"
+      [isTyping]="isTyping"
+      [typingUser]="
+        joinForm.get('nickName')?.value[0].toUpperCase() +
+        joinForm.get('nickName')?.value.slice(1)
+      "
     ></msgForm>
   </div>
   <div class="col-2 overflow-visible">

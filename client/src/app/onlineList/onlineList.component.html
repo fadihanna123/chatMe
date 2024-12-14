@@ -11,6 +11,6 @@ All
     }"
   ></fa-icon>
   <!-- <button (click)="openNewRoom(user.nickname, user.userId)"> -->
-  {{ user.nickname }}
+  {{ user.nickname[0]?.toUpperCase() + user.nickname.slice(1) }}
   <!-- </button> -->
 </div>
