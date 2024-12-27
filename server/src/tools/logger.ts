@@ -1,7 +1,7 @@
 import { DateTime } from 'luxon';
 import winston, { format } from 'winston';
 
-const myFormat = format.printf(({ level, message, timestamp }) => {
+const myFormat = format.printf(({ level, message, timestamp }: any) => {
   timestamp = DateTime.fromJSDate(new Date(timestamp)).toFormat(
     'yyyy-MM-dd HH:mm'
   );

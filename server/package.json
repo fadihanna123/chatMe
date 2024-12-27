@@ -1,7 +1,7 @@
 {
   "name": "chatme_server",
   "private": true,
-  "version": "0.0.26",
+  "version": "0.0.27",
   "homepage": "https://localhost:5000",
   "license": "MIT",
   "readme": "README.md",
@@ -35,12 +35,12 @@
     "winston": "^3.17.0"
   },
   "devDependencies": {
-    "@prisma/client": "^6.0.1",
+    "@prisma/client": "^6.1.0",
     "@types/eslint": "^9.6.1",
     "@types/luxon": "^3.4.2",
     "@types/node-cron": "^3.0.11",
-    "@typescript-eslint/eslint-plugin": "^8.18.0",
-    "@typescript-eslint/parser": "^8.18.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
     "dotenv": "^16.4.7",
     "eslint": "9.17.0",
     "eslint-config-prettier": "^9.1.0",
@@ -57,7 +57,7 @@
     "eslint-plugin-tsdoc": "^0.4.0",
     "node-cron": "^3.0.3",
     "prettier": "^3.4.2",
-    "prisma": "^6.0.1",
+    "prisma": "^6.1.0",
     "prisma-docs-generator": "^0.8.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"

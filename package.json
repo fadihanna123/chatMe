@@ -1,6 +1,6 @@
 {
   "name": "chatme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "repository": "https://github.com/fadihanna123/chatMe.git",
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
@@ -11,6 +11,6 @@
     "clear": "rimraf node_modules && cd server && rimraf node_modules && cd .. && cd client && rimraf node_modules"
   },
   "dependencies": {
-    "concurrently": "^9.1.0"
+    "concurrently": "^9.1.1"
   }
 }
