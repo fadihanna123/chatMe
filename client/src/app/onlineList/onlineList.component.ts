@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { faCircle, faSignal } from '@fortawesome/free-solid-svg-icons';
-import { ChatService } from 'app/services';
+import { ChatService } from '@app/services';
 
 @Component({
-    selector: 'OnlineList',
-    templateUrl: './onlineList.component.html',
-    standalone: false
+  selector: 'OnlineList',
+  templateUrl: './onlineList.component.html',
+  standalone: false,
 })
 export class OnlineListComponent {
   @Input() public onlineList!: OnlineList[];

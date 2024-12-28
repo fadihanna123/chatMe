@@ -9,7 +9,7 @@ import {
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-import { ChatService } from '../services';
+import { ChatService } from '@app/services';
 
 @Component({
   selector: 'msgForm',

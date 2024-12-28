@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { io } from 'socket.io-client';
 
-import { serverUrl } from 'environments/environment';
+import { serverUrl } from '@core/environments/environment';
 
 @Injectable({
   providedIn: 'root',

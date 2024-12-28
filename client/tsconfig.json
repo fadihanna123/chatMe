@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "esModuleInterop": true,
     "outDir": "./dist/out-tsc",
     "alwaysStrict": true,
@@ -15,12 +15,11 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
-    "module": "ES2022",
+    "target": "ES2017",
+    "module": "ES2015",
     "useDefineForClassFields": false,
     "lib": ["ES2022", "dom"],
     "allowSyntheticDefaultImports": true,
-    "allowJs": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "checkJs": true,
@@ -41,7 +40,8 @@
     "noUncheckedIndexedAccess": true,
     "removeComments": true,
     "paths": {
-      "@core/*": ["src/app/"],
+      "@core/*": ["src/*"],
+      "@app/*": ["src/app/*"],
       "@assets/*": ["src/assets/*"]
     }
   },

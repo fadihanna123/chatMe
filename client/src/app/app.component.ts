@@ -8,8 +8,7 @@ import {
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
-import { SettingsService } from './services';
-import { ChatService } from './services/chat.service';
+import { SettingsService, ChatService } from '@app/services';
 
 /**
  * @author Fadi Hanna <fhanna181@gmail.com>

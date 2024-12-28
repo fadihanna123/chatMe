@@ -3,13 +3,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { AppComponent } from './app.component';
-import { MsgFormComponent } from './msg-form/msg-form.component';
-import { ChatService } from './services';
-import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './inc/header/header.component';
-import { MessagesPanelComponent } from './messagesPanel/messagesPanel.component';
-import { OnlineListComponent } from './onlineList/onlineList.component';
+import { AppComponent } from '@app/app.component';
+import { MsgFormComponent } from '@app/msg-form/msg-form.component';
+import { ChatService } from '@app/services';
+import { provideHttpClient } from '@angular/common/http';
+import { HeaderComponent } from '@app/inc/header/header.component';
+import { MessagesPanelComponent } from '@app/messagesPanel/messagesPanel.component';
+import { OnlineListComponent } from '@app/onlineList/onlineList.component';
 
 const declarations = [
   AppComponent,
@@ -19,14 +19,9 @@ const declarations = [
   OnlineListComponent,
 ];
 
-const imports = [
-  BrowserModule,
-  ReactiveFormsModule,
-  FontAwesomeModule,
-  HttpClientModule,
-];
+const imports = [BrowserModule, ReactiveFormsModule, FontAwesomeModule];
 
-const providers: any[] = [ChatService];
+const providers: any[] = [ChatService, provideHttpClient()];
 
 const bootstrap = [AppComponent];
 
