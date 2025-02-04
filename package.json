@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "concurrently": "^9.1.2"
+  },
+  "devDependencies": {
+    "@angular/cli": "^19.1.5"
   }
 }
