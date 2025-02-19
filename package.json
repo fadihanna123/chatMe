@@ -11,9 +11,9 @@
     "clear": "rimraf node_modules && cd server && rimraf node_modules && cd .. && cd client && rimraf node_modules"
   },
   "dependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "9.1.2"
   },
   "devDependencies": {
-    "@angular/cli": "^19.1.5"
+    "@angular/cli": "19.1.8"
   }
 }
