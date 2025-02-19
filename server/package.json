@@ -24,7 +24,8 @@
     "lint": "eslint .",
     "format": "prettier -w .",
     "seed-migrate": "prisma migrate dev",
-    "seed-delete": "prisma migrate reset"
+    "seed-delete": "prisma migrate reset",
+    "clear": "rimraf node_modules dbDocs"
   },
   "prisma": {
     "schema": "src/prisma/schema.prisma"
@@ -59,6 +60,7 @@
     "prettier": "3.5.1",
     "prisma": "6.4.0",
     "prisma-docs-generator": "0.8.0",
+    "rimraf": "^6.0.1",
     "ts-node-dev": "2.0.0",
     "tsconfig-paths": "4.2.0",
     "typescript": "5.7.3"

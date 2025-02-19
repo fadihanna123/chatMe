@@ -8,7 +8,7 @@
     "setup": "yarn --silent --emoji --ignore-scripts && cd server && yarn --silent --emoji --ignore-scripts && cd .. && cd client && yarn --silent --emoji --ignore-scripts",
     "dev": "concurrently \"cd server && yarn dev\" \"cd client && yarn dev\"",
     "seed": "cd server && yarn seed",
-    "clear": "rimraf node_modules && cd server && rimraf node_modules && cd .. && cd client && rimraf node_modules"
+    "clear": "npx rimraf node_modules && cd server && yarn clear && cd .. && cd client && yarn clear"
   },
   "dependencies": {
     "concurrently": "9.1.2"
