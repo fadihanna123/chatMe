@@ -51,7 +51,7 @@
     "@typescript-eslint/eslint-plugin": "8.24.1",
     "@typescript-eslint/parser": "8.25.0",
     "eslint": "9.21.0",
-    "eslint-config-prettier": "10.0.1",
+    "eslint-config-prettier": "10.0.2",
     "eslint-plugin-dtslint": "3.0.2",
     "eslint-plugin-editorconfig": "4.0.3",
     "eslint-plugin-import": "2.31.0",
