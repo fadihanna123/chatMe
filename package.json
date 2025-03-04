@@ -1,6 +1,7 @@
 {
   "name": "chatme",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "lastUpgrade": "20250304",
   "repository": "https://github.com/fadihanna123/chatMe.git",
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
@@ -14,6 +15,6 @@
     "concurrently": "9.1.2"
   },
   "devDependencies": {
-    "@angular/cli": "19.1.8"
+    "@angular/cli": "19.2.0"
   }
 }
