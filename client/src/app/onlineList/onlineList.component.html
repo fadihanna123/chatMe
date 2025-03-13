@@ -1,13 +1,13 @@
 <fa-icon [icon]="onlineIcon"></fa-icon> OnlineList
 <br />
 <!-- <button (click)="openNewRoom()">All</button> -->
-All
+<span class="ms-4"> All </span>
 <div *ngFor="let user of onlineList">
   <fa-icon
     [icon]="dotIcon"
     [ngClass]="{
       'text-success': user.status === 'online',
-      'text-light': user.status === 'offline',
+      'text-info': user.status === 'offline',
     }"
   ></fa-icon>
   <!-- <button (click)="openNewRoom(user.nickname, user.userId)"> -->
