@@ -57,7 +57,7 @@
     "eslint-plugin-dtslint": "3.0.2",
     "eslint-plugin-editorconfig": "4.0.3",
     "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-jsdoc": "50.6.6",
+    "eslint-plugin-jsdoc": "50.6.9",
     "eslint-plugin-prettier": "5.2.3",
     "htmlhint": "1.1.4",
     "jasmine-core": "~5.6.0",
