@@ -1,41 +1,91 @@
-# chatMe
+# ChatMe
 
-> chatMe is a chatapplication to chat other people in the public chat. All messages will be shown in the chatroom. <br />
+A modern real-time chat application built with Angular and Node.js.
 
-## 🚀 Quick Start
+## Overview
 
-```sh
-# Clone the project
+ChatMe is a full-stack chat application that provides real-time messaging capabilities. The project consists of two main components:
+- Frontend: Angular-based client application
+- Backend: Node.js server with real-time communication capabilities
+
+## Features
+
+- Real-time messaging
+- Modern and responsive UI
+- Docker support for easy deployment
+- TypeScript for type safety
+- ESLint and Prettier for code quality
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- Yarn package manager
+- Docker (optional, for containerized deployment)
+
+## Installation
+
+1. Clone the repository:
+```bash
 git clone https://github.com/fadihanna123/chatMe.git
-```
-
-```sh
-# Go to the directory
 cd chatMe
 ```
 
-```sh
-# Install dependencies
+2. Install dependencies:
+```bash
 yarn setup
 ```
 
-```sh
-# Start the server
+## Development
+
+To start the development servers for both client and server:
+
+```bash
 yarn dev
-# Go to http://localhost:4200
 ```
 
-## Usage
+This will concurrently run:
+- Frontend server (Angular)
+- Backend server (Node.js)
 
-You enter by typing a nickName and after that you just send a message by typing your message and click send icon. Your message will be shown in chatroom. All received messages will be shown too there.
+## Available Scripts
 
-## 🤝 Contributing
+- `yarn setup` - Install all dependencies for both client and server
+- `yarn dev` - Start development servers
+- `yarn seed` - Seed the database with initial data
+- `yarn clear` - Clean up node_modules and clear cache
 
-1 - Clone the project. <br />
-2 - Fork the project. <br />
-3 - Create your own branch: `
-git checkout -b <your branchname>` <br />
-4 - Push changes. <br />
-5 - Create a pull request. <br />
+## Docker Deployment
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/fadihanna123/chatMe/issues).
+The project includes Docker support for both client and server. To run the application using Docker:
+
+```bash
+docker-compose up
+```
+
+## Project Structure
+
+```
+chatMe/
+├── client/           # Angular frontend application
+├── server/           # Node.js backend server
+├── .github/          # GitHub configuration
+├── .vscode/          # VS Code settings
+├── docker-compose.yaml
+└── package.json      # Root package.json with workspace scripts
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Author
+
+- Fadi Hanna - [GitHub](https://github.com/fadihanna123)
