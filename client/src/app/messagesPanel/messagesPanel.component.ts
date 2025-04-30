@@ -3,7 +3,7 @@ import { FormGroup } from '@angular/forms';
 import { SettingsService } from '@app/services';
 
 /**
- * @author Fadi Hanna <fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 @Component({

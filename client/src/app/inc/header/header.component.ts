@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 /**
- * @author Fadi Hanna <fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 @Component({

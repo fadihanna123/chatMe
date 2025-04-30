@@ -8,12 +8,10 @@
     "url": "https://github.com/fadihanna123/chatMe/tree/main/client"
   },
   "bugs": {
-    "email": "fhanna181@gmail.com",
     "url": "https://github.com/fadihanna123/chatMe/issues/"
   },
   "author": {
-    "name": "Fadi Hanna",
-    "email": "fhanna181@gmail.com"
+    "name": "Fadi Hanna"
   },
   "scripts": {
     "ng": "ng",

@@ -11,7 +11,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import { SettingsService, ChatService } from '@app/services';
 
 /**
- * @author Fadi Hanna <fhanna181@gmail.com>
+ * @author Fadi Hanna
  */
 
 @Component({

@@ -11,12 +11,10 @@
     "url": "https://github.com/fadihanna123/chatMe/tree/main/server/"
   },
   "bugs": {
-    "email": "fhanna181@gmail.com",
     "url": "https://github.com/fadihanna123/chatMe/issues"
   },
   "author": {
-    "name": "Fadi Hanna",
-    "email": "fhanna181@gmail.com"
+    "name": "Fadi Hanna"
   },
   "scripts": {
     "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
