@@ -56,7 +56,7 @@
     "eslint-plugin-editorconfig": "4.0.3",
     "eslint-plugin-import": "2.31.0",
     "eslint-plugin-jsdoc": "50.6.11",
-    "eslint-plugin-prettier": "5.2.6",
+    "eslint-plugin-prettier": "5.4.0",
     "htmlhint": "1.1.4",
     "jasmine-core": "~5.7.0",
     "karma": "~6.4.4",
