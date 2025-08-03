@@ -32,6 +32,7 @@ services:
     container_name: chatme_backend
     ports:
       - 5000:5000
+      - 5555:5555
     env_file:
       - ./server/.docker.env
     restart: no
