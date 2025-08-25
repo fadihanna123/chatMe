@@ -160,11 +160,7 @@ export class ChatService {
     });
   }
 
-  public findIfOnlineUserExists(
-    nickName: string,
-    onlineList: OnlineList[],
-    id?: number
-  ) {
+  public findIfOnlineUserExists(nickName: string, onlineList: OnlineList[]) {
     const foundOnlineUser = onlineList.find(
       (user) => user.nickname === nickName
     );
