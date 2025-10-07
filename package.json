@@ -1,12 +1,12 @@
 {
   "name": "chatme",
-  "version": "1.0.13",
-  "lastUpgrade": "20250825",
+  "version": "1.0.14",
+  "lastUpgrade": "20251007",
   "repository": "https://github.com/fadihanna123/chatMe.git",
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "setup": "yarn --silent --emoji --ignore-scripts && cd server && yarn --silent --emoji --ignore-scripts && cd .. && cd client && yarn --silent --emoji --ignore-scripts",
+    "setup": "yarn --silent --emoji --ignore-scripts --immutable && cd server && yarn --silent --emoji --ignore-scripts --immutable && cd .. && cd client && yarn --silent --emoji --ignore-scripts --immutable",
     "dev": "concurrently \"cd server && yarn dev\" \"cd client && yarn dev\"",
     "lint": "yarn --cwd ./server lint && yarn --cwd ./client lint",
     "format": "yarn --cwd ./server format && yarn --cwd ./client format",
@@ -18,7 +18,7 @@
     "concurrently": "9.2.1"
   },
   "devDependencies": {
-    "@angular/cli": "20.2.0",
-    "husky": "^9.1.7"
+    "@angular/cli": "20.3.4",
+    "husky": "9.1.7"
   }
 }

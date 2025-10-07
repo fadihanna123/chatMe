@@ -128,18 +128,18 @@
   dependencies:
     "@algolia/client-common" "5.35.0"
 
-"@angular-devkit/architect@0.2002.0":
-  version "0.2002.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.2002.0.tgz#3c00b6aea8836e9683122c118523c2a44b508d6e"
-  integrity sha512-PaBXFP1kdUuNtMie0lWnitlYbq8o1gz/s0YIa8oY1X3swOJ7bP6kBfxTb9opV5uXAOkXg2zCdnZ4Eu1aVkgPGw==
+"@angular-devkit/architect@0.2003.4":
+  version "0.2003.4"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.2003.4.tgz#1415282093cc384e8daf7af28adb72cc03e9f097"
+  integrity sha512-OKT6QuoG+rZZmRQ9mSZoh1pCGB5jBrkb45CzI8VdaLFhrZ7Uqg1wri1tj5KpSQYLAd22uUFNIE0uzMmGwXHbYA==
   dependencies:
-    "@angular-devkit/core" "20.2.0"
+    "@angular-devkit/core" "20.3.4"
     rxjs "7.8.2"
 
-"@angular-devkit/core@20.2.0":
-  version "20.2.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-20.2.0.tgz#9ad5e8086f15fcadb8d72413643487cf149fe944"
-  integrity sha512-3CM6Zsr09Kf92ItFkxijlnC4+ZOgkxdCk0vFYvuw9UuvTDNwyIqJi6693PRPRbcXgpdY2vs6u99elSvQVmoEEw==
+"@angular-devkit/core@20.3.4":
+  version "20.3.4"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-20.3.4.tgz#9e357b69f981f1437fdc0cd352deb489789e0ee7"
+  integrity sha512-r83jn9yVdPh618oGgoKPggMsQGOkQqJbxEutd4CE9mnotPCE2uRTIyaFMh8sohNUeoQNRmj9rbr2pWGVlgERpg==
   dependencies:
     ajv "8.17.1"
     ajv-formats "3.0.1"
@@ -148,29 +148,29 @@
     rxjs "7.8.2"
     source-map "0.7.6"
 
-"@angular-devkit/schematics@20.2.0":
-  version "20.2.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-20.2.0.tgz#99e07f09feeaeb8073e71b7612f2b8381a40d7f1"
-  integrity sha512-TCPIN6Bd04oGuNocETmsd9hzGYrjrivisbMKb0WOuDi3OnCkmWqsPR+QA2kYwTOGqG3HXkz/z3CA0g04M2fgrQ==
+"@angular-devkit/schematics@20.3.4":
+  version "20.3.4"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-20.3.4.tgz#ef648d61b6b987158ab241bdd85f0cc2ae454e8f"
+  integrity sha512-JYlcmVBKNT9+cQ6T2tmu+yVQ2bJk8tG0mXvPHWXrl/M4c6NObhSSThK50tJHy0Xo3gl8WgogOxUeJNnBq67cIQ==
   dependencies:
-    "@angular-devkit/core" "20.2.0"
+    "@angular-devkit/core" "20.3.4"
     jsonc-parser "3.3.1"
     magic-string "0.30.17"
     ora "8.2.0"
     rxjs "7.8.2"
 
-"@angular/cli@20.2.0":
-  version "20.2.0"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-20.2.0.tgz#372d4e353856c0affa499183fe50b1cdf2ad7595"
-  integrity sha512-p62hkuQOxf5kJsVq6AT7B1MHYo1uPGoZV4lf47qOrLjl0WANwfxEgLvyuVgL47ylnINbPnITeeUdoadVn4t1sw==
+"@angular/cli@20.3.4":
+  version "20.3.4"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-20.3.4.tgz#f0d44cbbd86a6cef01c77c6d2d65bdd94f3eb5d6"
+  integrity sha512-aNPk9ljY2PTc+ZoA7M67rxNvhbUJvzkuYcAdJuHbAIDoWcr2HhyFM2aGrLH3DVemY39xN/haJHj3FYJ8rCdXNw==
   dependencies:
-    "@angular-devkit/architect" "0.2002.0"
-    "@angular-devkit/core" "20.2.0"
-    "@angular-devkit/schematics" "20.2.0"
+    "@angular-devkit/architect" "0.2003.4"
+    "@angular-devkit/core" "20.3.4"
+    "@angular-devkit/schematics" "20.3.4"
     "@inquirer/prompts" "7.8.2"
     "@listr2/prompt-adapter-inquirer" "3.0.1"
     "@modelcontextprotocol/sdk" "1.17.3"
-    "@schematics/angular" "20.2.0"
+    "@schematics/angular" "20.3.4"
     "@yarnpkg/lockfile" "1.1.0"
     algoliasearch "5.35.0"
     ini "5.0.0"
@@ -471,13 +471,13 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@schematics/angular@20.2.0":
-  version "20.2.0"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-20.2.0.tgz#c8a8e72ca3d16e8d81c1488fca39f3fa9a8a0c2a"
-  integrity sha512-7sZVj7hOcytQrPE17ixjzul9ih81IfXGcEZvr7fT77qy7Hm5rbMjxqSYxCTf3kAyBFRSLq/E8GTapPAjk2coOg==
+"@schematics/angular@20.3.4":
+  version "20.3.4"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-20.3.4.tgz#acf1971b60de5fef1c6e4257de9c44d0e7a3dac8"
+  integrity sha512-aIgeRAfSJdxVfsES521vNb6Nuy+Uei7xE85hD+mQHX+62bN7vJhM/tmMFIYS7UF8d0rRnMPiGEr2Rfx6Om5iPg==
   dependencies:
-    "@angular-devkit/core" "20.2.0"
-    "@angular-devkit/schematics" "20.2.0"
+    "@angular-devkit/core" "20.3.4"
+    "@angular-devkit/schematics" "20.3.4"
     jsonc-parser "3.3.1"
 
 "@sigstore/bundle@^3.1.0":
@@ -1203,7 +1203,7 @@ https-proxy-agent@^7.0.1:
     agent-base "^7.1.2"
     debug "4"
 
-husky@^9.1.7:
+husky@9.1.7:
   version "9.1.7"
   resolved "https://registry.yarnpkg.com/husky/-/husky-9.1.7.tgz#d46a38035d101b46a70456a850ff4201344c0b2d"
   integrity sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA==

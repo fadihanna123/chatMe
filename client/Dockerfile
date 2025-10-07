@@ -1,4 +1,4 @@
-FROM node:22.17.1-slim
+FROM node:22.20-alpine
 WORKDIR /frontend
 RUN npm i -g --ignore-scripts --silent @angular/cli
 COPY yarn.lock package.json ./

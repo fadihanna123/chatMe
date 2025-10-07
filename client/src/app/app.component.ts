@@ -22,6 +22,7 @@ import { SettingsService, ChatService } from '@app/services';
 })
 export class AppComponent implements OnInit {
   public joinForm!: FormGroup;
+  public pageLoading: boolean = true;
   public login: boolean = false;
   public noVal: boolean = false;
   public errorVal: string = '';
@@ -135,6 +136,10 @@ export class AppComponent implements OnInit {
    * @example this.ngOnInit();
    */
   public ngOnInit(): void {
+    setTimeout(() => {
+      this.pageLoading = false;
+    }, 1000);
+
     this.initJoinForm();
   }
 }
