@@ -35,7 +35,7 @@
     "noUncheckedIndexedAccess": true,
     "removeComments": true
   },
-  "include": ["src/**/*", "./eslint.config.mts"],
+  "include": ["src/**/*", "./eslint.config.mts", "./prisma.config.ts"],
   "files": ["./src/types/global.d.ts"],
   "exclude": ["./node_modules"]
 }

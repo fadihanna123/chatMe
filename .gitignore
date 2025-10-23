@@ -31,3 +31,9 @@ yarn-error.log*
 
 # Folder config file
 [Dd]esktop.ini
+
+# Mac
+.DS_Store
+
+# Docker
+.docker.env

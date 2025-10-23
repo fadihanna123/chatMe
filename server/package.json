@@ -17,6 +17,7 @@
     "name": "Fadi Hanna"
   },
   "scripts": {
+    "setup": "yarn --silent --emoji --ignore-scripts --immutable",
     "dev": "ts-node-dev --poll -r tsconfig-paths/register src/app",
     "seed": "prisma db push && prisma db pull && prisma generate",
     "studio": "prisma studio",
@@ -26,9 +27,6 @@
     "seed-migrate": "prisma migrate dev",
     "seed-delete": "prisma migrate reset",
     "clear": "rimraf node_modules dbDocs"
-  },
-  "prisma": {
-    "schema": "src/prisma/schema.prisma"
   },
   "dependencies": {
     "luxon": "3.7.2",

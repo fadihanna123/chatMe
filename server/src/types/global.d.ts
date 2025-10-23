@@ -7,7 +7,7 @@ declare global {
       DEBUGGING_ADMIN_URL: string;
       DEBUGGING_ADMIN__USERNAME: string;
       DEBUGGING_ADMIN_PSW: string;
-      NODE_ENV: 'development' | 'production';
+      NODE_ENV: 'development' | 'production' | 'test';
     }
   }
 
