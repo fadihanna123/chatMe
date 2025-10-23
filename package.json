@@ -1,7 +1,7 @@
 {
   "name": "chatme",
-  "version": "1.0.14",
-  "lastUpgrade": "20251007",
+  "version": "1.0.15",
+  "lastUpgrade": "20251024",
   "repository": "https://github.com/fadihanna123/chatMe.git",
   "author": "Fadi Hanna <54924938+fadihanna123@users.noreply.github.com>",
   "license": "MIT",
@@ -10,6 +10,7 @@
     "dev": "concurrently \"cd server && yarn dev\" \"cd client && yarn dev\"",
     "lint": "yarn --cwd ./server lint && yarn --cwd ./client lint",
     "format": "yarn --cwd ./server format && yarn --cwd ./client format",
+    "archive": "yarn pack --filename=chatMe.zip",
     "seed": "cd server && yarn seed",
     "clear": "npx rimraf node_modules && cd server && yarn clear && cd .. && cd client && yarn clear",
     "prepare": "husky"
@@ -18,7 +19,7 @@
     "concurrently": "9.2.1"
   },
   "devDependencies": {
-    "@angular/cli": "20.3.4",
+    "@angular/cli": "20.3.7",
     "husky": "9.1.7"
   }
 }
