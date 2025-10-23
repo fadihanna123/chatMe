@@ -101,6 +101,13 @@ export class AppComponent implements OnInit {
     if (!this.joinForm.get('nickName')?.value) {
       this.noVal = true;
       return;
+    } else if (!this.chat.checkIsSocketConnected()) {
+      this.errorVal =
+        'Service is not connected. Please try again later! reloading...';
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
+      return;
     } else if (
       this.chat.findIfOnlineUserExists(
         this.joinForm.get('nickName')?.value,

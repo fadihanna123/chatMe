@@ -39,6 +39,10 @@ export class ChatService {
     });
   }
 
+  public checkIsSocketConnected(): boolean {
+    return this.socket.connected;
+  }
+
   /**
    * Get every new user from the server.
    * @function getNewUser
