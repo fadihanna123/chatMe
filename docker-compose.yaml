@@ -29,6 +29,7 @@ services:
 
   api:
     build: ./server
+    image: ${DOCKER_USERNAME}/chatme-backend
     container_name: chatme_backend
     ports:
       - 5000:5000
@@ -44,6 +45,7 @@ services:
 
   web:
     build: ./client
+    image: ${DOCKER_USERNAME}/chatme-frontend
     container_name: chatme_frontend
     ports:
       - 4200:4200
