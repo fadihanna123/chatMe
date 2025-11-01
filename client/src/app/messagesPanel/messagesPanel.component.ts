@@ -9,6 +9,7 @@ import { SettingsService } from '@app/services';
 @Component({
   selector: 'MessagesPanel',
   templateUrl: './messagesPanel.component.html',
+  styleUrl: './messagesPanel.component.scss',
   standalone: false,
 })
 export class MessagesPanelComponent {

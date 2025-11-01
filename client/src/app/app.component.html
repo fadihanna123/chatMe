@@ -1,8 +1,8 @@
 <div
-  class="d-flex justify-content-center align-items-center h-screen"
+  class="d-flex justify-content-center align-items-center pageLoading"
   *ngIf="pageLoading"
 >
-  <div class="spinner-border w-[3rem] h-[3rem]" role="status">
+  <div class="spinner-border loadingSpinner" role="status">
     <span class="sr-only"></span>
   </div>
 </div>
@@ -26,7 +26,7 @@
           <div *ngIf="noVal" class="text-danger">
             Please fill your nickName!
           </div>
-          <div *ngIf="errorVal" class="text-nowrap" class="text-danger">
+          <div *ngIf="errorVal" class="text-nowrap text-danger">
             {{ errorVal }}
           </div>
         </div>
