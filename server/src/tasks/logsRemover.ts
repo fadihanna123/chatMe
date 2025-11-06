@@ -1,5 +1,5 @@
 import { prisma } from '../app';
-import { fileCleaner } from './fileClenaer';
+import { fileCleaner } from './fileCleaner';
 
 /**
  * Clean log and error data in the database and call fileCleaner.
@@ -11,3 +11,4 @@ export const logsRemover = async () => {
   await prisma.errors.deleteMany();
   fileCleaner();
 };
+

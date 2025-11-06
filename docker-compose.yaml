@@ -1,15 +1,15 @@
 services:
   db:
     image: mysql:lts-oraclelinux9
-    container_name: chatme_db
-    restart: no
+    container_name: ${DATABASE_NAME}
+    restart: 'unless-stopped'
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: chat_me_db
-      MYSQL_USER: fadi
-      MYSQL_PASSWORD: '0000'
+      MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DATABASE_NAME}
+      MYSQL_USER: ${DATABASE_USERNAME}
+      MYSQL_PASSWORD: ${DATABASE_PASSWORD}
     volumes:
       - chatme_db-data:/var/lib/mysql
 
@@ -18,10 +18,10 @@ services:
     container_name: chatme_db_admin
     ports:
       - '8080:80'
-    restart: no
+    restart: 'unless-stopped'
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: ${DATABASE_ROOT_PASSWORD}
     volumes:
       - chatme_db-admin:/var/lib/db/data
     depends_on:
@@ -36,11 +36,11 @@ services:
       - 5555:5555
     env_file:
       - ./server/.docker.env
-    restart: no
+    restart: 'unless-stopped'
     volumes:
       - ./server/:/backend
       - /backend/node_modules
-    links:
+    depends_on:
       - db
 
   web:
@@ -52,8 +52,8 @@ services:
     volumes:
       - ./client/:/frontend
       - /frontend/node_modules
-    restart: no
-    links:
+    restart: 'unless-stopped'
+    depends_on:
       - api
 
 volumes:

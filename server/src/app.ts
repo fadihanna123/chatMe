@@ -1,13 +1,30 @@
 import 'dotenv/config.js';
 import { logger } from './tools';
-import { debuggingUrl, originUrl, serverPort } from './utils';
+import {
+  debuggingUrl,
+  originUrl,
+  serverENV,
+  serverPort,
+  storeLog,
+} from './utils';
 import { PrismaClient } from '@prisma/client';
 import type { Socket } from 'socket.io';
 import { Server } from 'socket.io';
+import {
+  disconnect,
+  join,
+  joinRoom,
+  sendMsg,
+  typingStarted,
+  typingStopped,
+} from 'actions';
 
 const io = new Server(Number(serverPort), {
   cors: {
-    origin: [originUrl as string, debuggingUrl as string],
+    origin: [
+      originUrl as string,
+      serverENV === 'development' && (debuggingUrl as string),
+    ],
     credentials: true,
   },
 });
@@ -15,59 +32,22 @@ const io = new Server(Number(serverPort), {
 export const prisma = new PrismaClient();
 
 io.on('connection', (socket: Socket) => {
-  const date: Date = new Date();
-  console.log(`✅${socket.id} has connected`);
+  storeLog(`✅${socket.id} has connected`);
   logger.info(`✅${socket.id} has connected`, '', '');
 
-  socket.on('sendMsg', (data: { roomId: string }) => {
-    if (data.roomId) {
-      socket.broadcast.to(data.roomId).emit('new message');
-    } else {
-      io.sockets.emit('new message', data);
-    }
-  });
+  socket.on('sendMsg', (data: { roomId: string }) => sendMsg(data, socket, io));
 
   socket.on('joinRoom', async (data: { roomId: string }) => {
-    if (data.roomId === 'Group') {
-      await socket.join('Group');
-      socket.broadcast.to('Group').emit('new message');
-    } else {
-      await socket.join(data.roomId);
-    }
+    joinRoom(data, socket);
   });
 
-  socket.on('join', (data: OnlineList) => {
-    /**
-     * @param { string } userId
-     * @param { string } nickname
-     * @param { string } status
-     * @param { Date } date
-     */
-    const payload = {
-      userId: data.userId,
-      nickname: data.nickname,
-      status: data.status,
-      date,
-    };
-
-    socket.broadcast.emit('new user', payload);
-    socket.broadcast.emit('login', true);
-  });
+  socket.on('join', (data: OnlineList) => join(data, socket));
 
   socket.on('typing started', (nickName: string) => {
-    socket.broadcast.emit('typing started', nickName);
+    typingStarted(nickName, socket);
   });
 
-  socket.on('typing stopped', () => {
-    socket.broadcast.emit('typing stopped');
-  });
+  socket.on('typing stopped', () => typingStopped(socket));
 
-  socket.on('disconnect', () => {
-    /**
-     * @param { string } userId
-     */
-    const data = { userId: socket.id };
-
-    io.sockets.emit('deleted user', data);
-  });
+  socket.on('disconnect', () => disconnect(io, socket));
 });

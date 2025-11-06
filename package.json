@@ -8,12 +8,13 @@
   "scripts": {
     "setup": "yarn --silent --emoji --ignore-scripts --immutable && yarn --cwd ./server --silent --emoji --ignore-scripts --immutable && yarn --cwd ./client --silent --emoji --ignore-scripts --immutable",
     "dev": "concurrently \"cd server && yarn dev\" \"cd client && yarn dev\"",
+    "build": "yarn --cwd ./server build && yarn --cwd ./client build",
     "lint": "yarn --cwd ./server lint && yarn --cwd ./client lint",
     "format": "yarn --cwd ./server format && yarn --cwd ./client format",
     "archive": "yarn pack --filename=chatMe.zip",
     "seed": "cd server && yarn seed",
-    "clear": "npx rimraf node_modules && cd server && yarn clear && cd .. && cd client && yarn clear",
-    "prepare": "husky"
+    "prepare": "husky",
+    "clear": "npx rimraf node_modules && cd server && yarn clear && cd .. && cd client && yarn clear"
   },
   "dependencies": {
     "concurrently": "9.2.1"

@@ -1,10 +1,10 @@
 import { DateTime } from 'luxon';
 import winston, { format } from 'winston';
 
-const myFormat = format.printf(({ level, message, timestamp }: any) => {
-  timestamp = DateTime.fromJSDate(new Date(timestamp)).toFormat(
-    'yyyy-MM-dd HH:mm'
-  );
+const myFormat = format.printf(({ level, message, timestamp }) => {
+  timestamp = DateTime.fromJSDate(
+    new Date(timestamp as string | number)
+  ).toFormat('yyyy-MM-dd HH:mm');
 
   return `{\n 'time': '${timestamp}', \n 'level': '${level}', \n 'message': '${message}'\n}`;
 });

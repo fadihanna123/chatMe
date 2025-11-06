@@ -30,17 +30,12 @@ model messages {
 
 model logs {
   id      Int    @id @default(autoincrement())
-  method  String
   message String
-  located String
   time    String
 }
 
 model errors {
   id      Int     @id @default(autoincrement())
-  errorId Int
-  method  String
   message String?
-  located String
   time    String
 }

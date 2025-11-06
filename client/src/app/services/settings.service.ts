@@ -16,6 +16,8 @@ export class SettingsService {
    * @example this.settings.setPageTitle("Welcome page");
    */
   public setPageTitle(title: string): void {
+    if (!title) console.log('No title provided...');
+
     this.title.setTitle(title);
   }
 
@@ -26,6 +28,8 @@ export class SettingsService {
    * @example this.settings.extractTime(20231020);
    */
   public extractTime(date: Date): string {
+    if (!date) console.log('No date provided...');
+
     return dayjs(date).fromNow();
   }
 }

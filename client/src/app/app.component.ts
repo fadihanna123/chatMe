@@ -65,6 +65,7 @@ export class AppComponent implements OnInit {
       );
 
       if (!deletedItem) return;
+
       deletedItem.status = deletedItem ? 'offline' : 'online';
     });
   }

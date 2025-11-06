@@ -21,7 +21,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "eslint ./",
+    "lint": "eslint",
     "format": "prettier -w .",
     "clear": "rimraf node_modules .angular"
   },

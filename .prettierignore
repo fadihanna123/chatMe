@@ -6,3 +6,4 @@ client/yarn.lock
 AUTHORS
 README.md
 .dockerignore
+build

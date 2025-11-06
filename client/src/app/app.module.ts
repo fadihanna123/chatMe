@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { EnvironmentProviders, NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -21,7 +21,10 @@ const declarations = [
 
 const imports = [BrowserModule, ReactiveFormsModule, FontAwesomeModule];
 
-const providers: any[] = [ChatService, provideHttpClient()];
+const providers: (typeof ChatService | EnvironmentProviders)[] = [
+  ChatService,
+  provideHttpClient(),
+];
 
 const bootstrap = [AppComponent];
 

@@ -7,7 +7,7 @@
     "target": "es6",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "alwaysStrict": true,
-    "outDir": "./dist",
+    "outDir": "./build",
     "module": "NodeNext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,

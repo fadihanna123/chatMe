@@ -10,6 +10,9 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig([
   {
+    ignores: ['**/node_modules', '**/build'],
+  },
+  {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     plugins: { js },
     extends: ['js/recommended'],
@@ -28,3 +31,4 @@ export default defineConfig([
     },
   },
 ]);
+

@@ -6,25 +6,16 @@ import { DateTime } from 'luxon';
  * @async
  * @function storeError
  * @param { string } message - Error message.
- * @param { string } method - HTTP method.
- * @param { string } located - Route.
- * @example storeError("Error!", "POST", "/");
+ * @example storeError("Error!");
  */
-export const storeError = async (
-  message: string,
-  method: string,
-  located: string
-): Promise<void> => {
-  const rnd: number = Math.floor(Math.random() * 1000);
+export const storeError = async (message: string): Promise<void> => {
+  if (!message) console.log('No error message provided...');
 
   const time = DateTime.fromJSDate(new Date()).toFormat('yyyy-MM-dd HH:mm');
 
   await prisma.errors.create({
     data: {
-      errorId: rnd,
-      method,
       message,
-      located,
       time,
     },
   });

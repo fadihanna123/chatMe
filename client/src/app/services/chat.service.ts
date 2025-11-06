@@ -13,10 +13,10 @@ export class ChatService {
   constructor() {
     this.socket = io(serverUrl);
 
-    this.socket.on('connect_error', (err: any) => {
+    this.socket.on('connect_error', (err) => {
       console.error(`❌ ${err instanceof Error}`);
       console.error(`❌ ${err.message}`);
-      console.error(`❌ ${err.data}`);
+      console.error(`❌ ${(err as any).data}`);
       this.socket.connect();
     });
 
@@ -110,6 +110,8 @@ export class ChatService {
    * @example this.chat.sendMessage("Erik", "Hi!");
    */
   public sendMessage(nickName: string, msg: string) {
+    if (!nickName || !msg) console.log('No data provided!');
+
     const data = {
       userId: this.socket.id,
       nickname: nickName,
@@ -140,6 +142,8 @@ export class ChatService {
    * @example this.chat.setStorage({ msg: "Hi", nickName: "Erik", date: 20225551747445 }, "123");
    */
   public setStorage(data: Message, selected?: string): void {
+    if (!data) console.log('No data to set...');
+
     const getCurrentData: Message[] = this.getStorage();
 
     if (getCurrentData) {
@@ -159,12 +163,18 @@ export class ChatService {
    * @example this.chat.openRoom("123", "Private");
    */
   public openRoom(id: string, roomType = 'Group'): void {
+    if (!id) console.log('No id provided...');
+
     this.socket.emit('joinRoom', {
       roomId: roomType === 'Group' ? 'Group' : id,
     });
   }
 
   public findIfOnlineUserExists(nickName: string, onlineList: OnlineList[]) {
+    if (!nickName || !onlineList) {
+      console.log('No nickName or onlinelist provided...');
+    }
+
     const foundOnlineUser = onlineList.find(
       (user) => user.nickname === nickName
     );
@@ -188,6 +198,10 @@ export class ChatService {
     onlineList: OnlineList[],
     id?: number
   ): void {
+    if (!nickName || !onlineList) {
+      console.log('No nickName or onlinelist provided...');
+    }
+
     this.socket.emit('join', {
       userId: id ?? this.socket.id,
       nickname: nickName,
