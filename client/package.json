@@ -37,7 +37,7 @@
     "@fortawesome/angular-fontawesome": "3.0.0",
     "@fortawesome/fontawesome-svg-core": "7.1.0",
     "@fortawesome/free-solid-svg-icons": "7.1.0",
-    "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/postcss": "^4.1.17",
     "bootstrap": "^5.3.8",
     "dayjs": "1.11.19",
     "normalize.css": "8.0.1",
