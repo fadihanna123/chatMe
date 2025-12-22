@@ -1,4 +1,4 @@
-import { prisma } from 'app';
+import { connection } from 'db';
 import { DateTime } from 'luxon';
 
 /**
@@ -13,10 +13,8 @@ export const storeError = async (message: string): Promise<void> => {
 
   const time = DateTime.fromJSDate(new Date()).toFormat('yyyy-MM-dd HH:mm');
 
-  await prisma.errors.create({
-    data: {
-      message,
-      time,
-    },
-  });
+  connection.query('INSERT INTO errors (message, time) VALUES (?, ?)', [
+    message,
+    time,
+  ]);
 };

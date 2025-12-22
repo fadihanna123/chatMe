@@ -7,7 +7,6 @@ import {
   serverPort,
   storeLog,
 } from './utils';
-import { PrismaClient } from '@prisma/client';
 import type { Socket } from 'socket.io';
 import { Server } from 'socket.io';
 import {
@@ -28,8 +27,6 @@ const io = new Server(Number(serverPort), {
     credentials: true,
   },
 });
-
-export const prisma = new PrismaClient();
 
 io.on('connection', (socket: Socket) => {
   storeLog(`✅${socket.id} has connected`);

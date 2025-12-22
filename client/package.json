@@ -16,7 +16,7 @@
   "scripts": {
     "setup": "yarn --silent --emoji --ignore-scripts --immutable",
     "ng": "ng",
-    "dev": "ng serve --host 0.0.0.0 --poll 2000",
+    "dev": "ng serve --host 0.0.0.0 --poll 2000 --ssl",
     "prebuild": "rm -rf ./dist",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
